@@ -252,7 +252,7 @@ let term = {
 
 let settings = {
   background: "#0f1020",
-  color: "#f5f5f5",
+  color: "#00ff55",
   prefix: "$ ",
   cmdPrefix: false,
   name: "user",
