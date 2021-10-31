@@ -440,14 +440,6 @@ document.addEventListener("keydown", (e) => {
 input.addEventListener("keydown", (e) => {
   e = e || window.event;
 
-  if (navigator.userAgent.indexOf("Firefox") > 0) {
-    if (e.key === " ") {
-      let newText = input.innerText + " ";
-
-      input.innerText = newText;
-    }
-  }
-
   if (e.key === "Enter") {
     e.preventDefault();
 
@@ -462,6 +454,10 @@ showCmdInTerm(
   "echo",
   "&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;<br/>|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|<br/>|&nbsp;|&nbsp;_____|&nbsp;|&nbsp;|__&nbsp;&nbsp;&nbsp;__&nbsp;_&nbsp;___|&nbsp;|&nbsp;Welcome&nbsp;to&nbsp;my&nbsp;website&nbsp;!<br/>|&nbsp;|/&nbsp;/&nbsp;_&nbsp;\\&nbsp;|&nbsp;'_&nbsp;\\&nbsp;/&nbsp;_`&nbsp;|_&nbsp;&nbsp;/&nbsp;|<br/>|&nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;__/&nbsp;|&nbsp;|_)&nbsp;|&nbsp;(_|&nbsp;|/&nbsp;/|_|&nbsp;You&nbsp;can&nbsp;access&nbsp;help&nbsp;by&nbsp;typing&nbsp;help.<br/>|_|\\_\\___|_|_.__/&nbsp;\\__,_/___(_)<br/>"
 );
+if (navigator.userAgent.indexOf("Firefox") > 0) {
+  showCmdInTerm("echo", "Sorry, Firefox won't let you add space... :(");
+}
+
 //<
 
 (() => {
