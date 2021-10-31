@@ -247,6 +247,13 @@ let term = {
         return "Hello! I'm Kelbaz! A french Web developer. I know HTML, CSS, JavaScript and Python. I also learn graphism and design.";
       },
     },
+    {
+      name: "contact",
+      description: "Contact me",
+      exec: () => {
+        return "Here's my discord tag: 'Kelbaz#7094'. Nothing else... ¯\\_(ツ)_/¯";
+      },
+    },
   ],
 };
 
@@ -256,9 +263,9 @@ let settings = {
   prefix: "$ ",
   cmdPrefix: false,
   name: "user",
-  hostname: (
-    navigator.userAgentData.brands[0].brand || navigator.appCodeName
-  ).toLowerCase(),
+  hostname: (navigator.userAgentData.brands[0].brand || navigator.appCodeName)
+    .toLowerCase()
+    .replace(" ", "_"),
   version: 0.3,
   inputPrefix: function () {
     return this.name + "@" + this.hostname + ": " + this.prefix;
