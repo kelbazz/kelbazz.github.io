@@ -211,6 +211,14 @@ let term = {
       },
     },
     {
+      name: "cd",
+      description: "Change the current URL directory",
+      structure: ["URL"],
+      exec: (args) => {
+        return (document.location.href = args[0]);
+      },
+    },
+    {
       name: "projects",
       description: "Some projects I made",
       exec: (args) => {
