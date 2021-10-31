@@ -232,10 +232,11 @@ let term = {
               return "Unknown project name.";
           }
         } else {
-          return showCmdInTerm(
+          showCmdInTerm(
             "echo",
-            "My projects :<br/><b>border</b>: a web iframe browser<br/><b>w96</b>: I've made some app for Windows96 like VSCode<br/><b>terminal</b>: A terminal in JavaScript<br/><b>openos</b>: An Web OS WIP<br/><br/>You can see the site of any project by typing 'projects ' and a project name in bold."
+            "My projects :<br/><b>border</b>: a web iframe browser<br/><b>w96</b>: I've made some app for Windows96 like VSCode<br/><b>terminal</b>: A terminal in JavaScript<br/><b>openos</b>: An Web OS WIP<br/><br/>"
           );
+          return "You can see the site of any project by typing 'projects ' and a project name in bold.";
         }
       },
     },
