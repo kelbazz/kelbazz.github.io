@@ -399,12 +399,7 @@ input.addEventListener("keydown", (e) => {
 });
 
 input.focus();
-showCmdInTerm("echo", "&nbsp_&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_&nbsp_&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_");
-showCmdInTerm("echo", "| |      | | |             | |");
-showCmdInTerm("echo", "| | _____| | |__   __ _ ___| |");
-showCmdInTerm("echo", "| |/ / _ \\ | '_ \\ / _` |_  / |");
-showCmdInTerm("echo", "|   <  __/ | |_) | (_| |/ /|_|");
-showCmdInTerm("echo", "|_|\\_\\___|_|_.__/ \\__,_/___(_)");
+showCmdInTerm("echo", "&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;<br/>|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|<br/>|&nbsp;|&nbsp;_____|&nbsp;|&nbsp;|__&nbsp;&nbsp;&nbsp;__&nbsp;_&nbsp;___|&nbsp;|<br/>|&nbsp;|/&nbsp;/&nbsp;_&nbsp;\\&nbsp;|&nbsp;'_&nbsp;\\&nbsp;/&nbsp;_`&nbsp;|_&nbsp;&nbsp;/&nbsp;|<br/>|&nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;__/&nbsp;|&nbsp;|_)&nbsp;|&nbsp;(_|&nbsp;|/&nbsp;/|_|<br/>|_|\\_\\___|_|_.__/&nbsp;\\__,_/___(_)");
 //<
 
 (() => {
