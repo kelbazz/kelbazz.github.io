@@ -263,7 +263,10 @@ let settings = {
   prefix: "$ ",
   cmdPrefix: false,
   name: "user",
-  hostname: (navigator.userAgentData.brands[0].brand || navigator.appCodeName)
+  hostname: (navigator.userAgentData
+    ? navigator.userAgentData.brands[0].brand
+    : navigator.appCodeName
+  )
     .toLowerCase()
     .replace(" ", "_"),
   version: 0.3,
