@@ -441,7 +441,7 @@ input.addEventListener("keydown", (e) => {
   e = e || window.event;
   if (navigator.userAgent.indexOf("Firefox") > 0) {
     if (e.key === " ") {
-      input.textContent = input.textContent + " ";
+      input.textContent = " " + input.textContent;
     }
   }
 
