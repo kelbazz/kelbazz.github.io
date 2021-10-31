@@ -440,6 +440,12 @@ document.addEventListener("keydown", (e) => {
 input.addEventListener("keydown", (e) => {
   e = e || window.event;
 
+  if (navigator.userAgent.indexOf("Firefox") > 0) {
+    if (e.key === " ") {
+      input.innerHTML += "&nbsp";
+    }
+  }
+
   if (e.key === "Enter") {
     e.preventDefault();
 
