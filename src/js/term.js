@@ -215,7 +215,7 @@ let term = {
       description: "Some projects I made",
       exec: (args) => {
         if (args[0]) {
-          switch (args) {
+          switch (args[0]) {
             case "w96":
               window.open("https://onofficiel.github.io/w96");
               break;
