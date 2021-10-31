@@ -213,21 +213,40 @@ let term = {
     {
       name: "projects",
       description: "Some projects I made",
-      exec: () => {
-        return showCmdInTerm(
-          "echo",
-          "My projects :<br/><a src='https://onofficiel.github.io/border'>Border, a web iframe browser</a><br/><a src='https://onofficiel.github.io/w96'>Windows 96 applications, like VSCode</a><br/><a src='https://onofficiel.github.io/terminal'>Onoff_Term, a terminal in JavaScript</a>"
-        );
+      exec: (args) => {
+        if (args) {
+          switch (args) {
+            case "w96":
+              window.open("https://onofficiel.github.io/w96");
+              break;
+            case "border":
+              window.open("https://onofficiel.github.io/border");
+              break;
+            case "terminal":
+              window.open("https://onofficiel.github.io/terminal");
+              break;
+            case "openos":
+              window.open("https://onofficiel.github.io/open-os");
+              break;
+            default:
+              return "Unknown project name.";
+          }
+        } else {
+          return showCmdInTerm(
+            "echo",
+            "My projects :<br/><b>border</b>: a web iframe browser<br/><b>w96</b>: I've made some app for Windows96 like VSCode<br/><b>terminal</b>: A terminal in JavaScript<br/><b>openos</b>: An Web OS WIP<br/><br/>You can see the site of any project by typing 'projects ' and a project name in bold."
+          );
+        }
       },
     },
     {
       name: "about",
       description: "About me",
       exec: () => {
-        return showCmdInTerm(
-          "echo",
-          "My projects :<br/><a src='https://onofficiel.github.io/border'>Border, a web iframe browser</a><br/><a src='https://onofficiel.github.io/w96'>Windows 96 applications, like VSCode</a><br/><a src='https://onofficiel.github.io/terminal'>Onoff_Term, a terminal in JavaScript</a>"
+        handleCommand(
+          "echo Hello! I'm a french Web developer. I know HTML, CSS, JavaScript and Python. I also learn graphism and design."
         );
+        return "";
       },
     },
   ],
