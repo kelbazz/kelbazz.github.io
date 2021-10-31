@@ -126,26 +126,6 @@ let term = {
             }
         },
         {
-            name: "fullscreen",
-            description: "Toggle the terminal in fullscreen",
-            structure: ["boolean"],
-            prefix: "$",
-            exec: (args) => {
-                if (args[0] === "true") {
-                    termDiv.style.width = "100%";
-                    termDiv.style.height = "100%";
-                    termDiv.style.borderRadius = null;
-                    return "Fullscreen set to true.";
-                } else if (args[0] === "false") {
-                    termDiv.style.width = "800px";
-                    termDiv.style.height = "400px";
-                    termDiv.style.borderRadius = "20px";
-                } else {
-                    return "Type an boolean in argument.";
-                }
-            }
-        },
-        {
             name: "color",
             description: "Change colors of the terminal",
             structure: ["text color", "background color"],
@@ -224,7 +204,7 @@ let settings = {
     background: "#0f1020",
     color: "#f5f5f5",
     prefix: "$ ",
-    cmdPrefix: true,
+    cmdPrefix: false,
     name: "user",
     hostname: (navigator.userAgentData.brands[0].brand || navigator.appCodeName).toLowerCase(),
     version: 0.3,
@@ -253,12 +233,12 @@ let files =
 let termDiv = document.querySelector(".term");
 
 termDiv.style = `
-    width: 800px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     background-color: ${settings.background};
     color: ${settings.color};
     font-family: monospace;
-    border-radius: 20px;
+    border-radius: 0;
     padding: 30px;
     overflow: scroll;
     transition: all 0.5s ease;
