@@ -438,6 +438,8 @@ document.addEventListener("keydown", (e) => {
 });
 
 input.addEventListener("keydown", (e) => {
+  e = e || window.event;
+  
   if (e.key === "Enter") {
     e.preventDefault();
 
