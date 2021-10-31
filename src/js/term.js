@@ -110,8 +110,6 @@ let term = {
             helpList += ".";
           }
         }
-        helpList +=
-          '\nCommands starting with "$" only affect the interface.\nCommands starting with "#" are instables commands.';
         return helpList;
       },
     },
@@ -206,7 +204,7 @@ let term = {
     },
     {
       name: "exe",
-      description: "execute javascript",
+      description: "Execute javascript",
       structure: ["js code"],
       exec: (args) => {
         return eval(args.join(" "));
@@ -214,10 +212,23 @@ let term = {
     },
     {
       name: "projects",
-      description: "Some projects I made.",
+      description: "Some projects I made",
       exec: () => {
-          return "My projects :<br/><a src='https://onofficiel.github.io/border'>Border, a web iframe browser</a><br/><a src='https://onofficiel.github.io/w96'>Windows 96 applications, like VSCode</a><br/><a src='https://onofficiel.github.io/terminal'>Onoff_Term, a terminal in JavaScript</a>"
-      }
+        return showCmdInTerm(
+          "echo",
+          "My projects :<br/><a src='https://onofficiel.github.io/border'>Border, a web iframe browser</a><br/><a src='https://onofficiel.github.io/w96'>Windows 96 applications, like VSCode</a><br/><a src='https://onofficiel.github.io/terminal'>Onoff_Term, a terminal in JavaScript</a>"
+        );
+      },
+    },
+    {
+      name: "about",
+      description: "About me",
+      exec: () => {
+        return showCmdInTerm(
+          "echo",
+          "My projects :<br/><a src='https://onofficiel.github.io/border'>Border, a web iframe browser</a><br/><a src='https://onofficiel.github.io/w96'>Windows 96 applications, like VSCode</a><br/><a src='https://onofficiel.github.io/terminal'>Onoff_Term, a terminal in JavaScript</a>"
+        );
+      },
     },
   ],
 };
