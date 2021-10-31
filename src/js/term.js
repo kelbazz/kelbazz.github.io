@@ -442,7 +442,6 @@ input.addEventListener("keydown", (e) => {
   if (navigator.userAgent.indexOf("Firefox") > 0) {
     if (e.key === " ") {
       input.textContent = input.textContent + " ";
-      focusAndMoveCursorToTheEnd();
     }
   }
 
