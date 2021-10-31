@@ -212,6 +212,13 @@ let term = {
         return eval(args.join(" "));
       },
     },
+    {
+      name: "projects",
+      description: "Some projects I made.",
+      exec: () => {
+          return "My projects :<br/><a src='https://onofficiel.github.io/border'>Border, a web iframe browser</a><br/><a src='https://onofficiel.github.io/w96'>Windows 96 applications, like VSCode</a><br/><a src='https://onofficiel.github.io/terminal'>Onoff_Term, a terminal in JavaScript</a>"
+      }
+    },
   ],
 };
 
@@ -395,7 +402,10 @@ input.addEventListener("keydown", (e) => {
 });
 
 input.focus();
-showCmdInTerm("echo", "&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;<br/>|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|<br/>|&nbsp;|&nbsp;_____|&nbsp;|&nbsp;|__&nbsp;&nbsp;&nbsp;__&nbsp;_&nbsp;___|&nbsp;|&nbsp;Welcome&nbsp;to&nbsp;my&nbsp;website&nbsp;!<br/>|&nbsp;|/&nbsp;/&nbsp;_&nbsp;\\&nbsp;|&nbsp;'_&nbsp;\\&nbsp;/&nbsp;_`&nbsp;|_&nbsp;&nbsp;/&nbsp;|<br/>|&nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;__/&nbsp;|&nbsp;|_)&nbsp;|&nbsp;(_|&nbsp;|/&nbsp;/|_|&nbsp;You&nbsp;can&nbsp;access&nbsp;help&nbsp;by&nbsp;typing&nbsp;help.<br/>|_|\\_\\___|_|_.__/&nbsp;\\__,_/___(_)");
+showCmdInTerm(
+  "echo",
+  "&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;<br/>|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;|<br/>|&nbsp;|&nbsp;_____|&nbsp;|&nbsp;|__&nbsp;&nbsp;&nbsp;__&nbsp;_&nbsp;___|&nbsp;|&nbsp;Welcome&nbsp;to&nbsp;my&nbsp;website&nbsp;!<br/>|&nbsp;|/&nbsp;/&nbsp;_&nbsp;\\&nbsp;|&nbsp;'_&nbsp;\\&nbsp;/&nbsp;_`&nbsp;|_&nbsp;&nbsp;/&nbsp;|<br/>|&nbsp;&nbsp;&nbsp;&lt;&nbsp;&nbsp;__/&nbsp;|&nbsp;|_)&nbsp;|&nbsp;(_|&nbsp;|/&nbsp;/|_|&nbsp;You&nbsp;can&nbsp;access&nbsp;help&nbsp;by&nbsp;typing&nbsp;help.<br/>|_|\\_\\___|_|_.__/&nbsp;\\__,_/___(_)<br/>"
+);
 //<
 
 (() => {
