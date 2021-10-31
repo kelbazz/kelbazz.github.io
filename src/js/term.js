@@ -385,7 +385,12 @@ input.addEventListener('keydown', (e) => {
 });
 
 input.focus();
-showCmdInTerm("echo", "Welcome to the term, " + settings.name + ". Type \"help\" for show commands infos");
+showCmdInTerm("echo", " _        _ _               _ ");
+showCmdInTerm("echo", "| |      | | |             | |");
+showCmdInTerm("echo", "| | _____| | |__   __ _ ___| |");
+showCmdInTerm("echo", "| |/ / _ \\ | '_ \\ / _` |_  / |");
+showCmdInTerm("echo", "|   <  __/ | |_) | (_| |/ /|_|");
+showCmdInTerm("echo", "|_|\\_\\___|_|_.__/ \\__,_/___(_)");
 //<
 
 (() => {
