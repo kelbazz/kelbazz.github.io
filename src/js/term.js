@@ -243,10 +243,7 @@ let term = {
       name: "about",
       description: "About me",
       exec: () => {
-        handleCommand(
-          "echo Hello! I'm a french Web developer. I know HTML, CSS, JavaScript and Python. I also learn graphism and design."
-        );
-        return "";
+        return "echo Hello! I'm a french Web developer. I know HTML, CSS, JavaScript and Python. I also learn graphism and design.";
       },
     },
   ],
