@@ -273,7 +273,6 @@ let styles = `
     display: inline;
     outline: none;
     visibility: visible;
-    line-height: 30px;
 }
 #input:empty::before {
     content: ' ';
@@ -296,9 +295,6 @@ let styles = `
     background-color: ${settings.color};
     display: inline-block;
     font-family: monospace;
-}
-#history {
-    line-height: 30px;
 }
 `;
 
