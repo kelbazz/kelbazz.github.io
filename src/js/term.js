@@ -1,7 +1,3 @@
-import {oos} from "https://open-os.netlify.app/system/kernel.js";
-
-oos.main();
-
 let term = {
   execCmd: (cmd, ...args) => {
     // Command Check
