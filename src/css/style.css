@@ -8,8 +8,23 @@ body {
     height: 100vh;
 }
 
+:root {
+    --tile-size: 1fr;
+    --repeat-time: 5;
+}
+
 #tile-container {
     width: 100%;
     height: 100%;
-    background: #f7545475;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--repeat-time), var(--tile-size));
+    grid-auto-columns: repeat(var(--repeat-time), var(--tile-size));
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+
+#tile {
+    
 }
