@@ -10,7 +10,7 @@ body {
 
 :root {
     --tile-size: 1fr;
-    --repeat-time: 5;
+    --repeat-time: 10;
 }
 
 #tile-container {
