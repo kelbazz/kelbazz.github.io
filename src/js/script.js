@@ -16,4 +16,4 @@ let tiles = tileContainer.querySelectorAll(".tile");
 
 setInterval(() => {
   tiles[Math.floor(Math.random() * tiles.length)].click();
-}, 1000);
+}, 500);
