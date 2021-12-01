@@ -6,9 +6,9 @@ let repeatTime = getComputedStyle(document.documentElement).getPropertyValue(
 for (let i = 0; i < Math.pow(repeatTime, 2); i++) {
   let tile = document.createElement("div");
   tile.classList.add("tile");
-  tile.onclick = () => {
+  tile.addEventListener("click", () => {
     tile.classList.toggle("stay");
-  };
+  });
   tileContainer.appendChild(tile);
 }
 
