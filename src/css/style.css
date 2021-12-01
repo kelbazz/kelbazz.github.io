@@ -40,6 +40,10 @@ body {
     background-color: #f00;
 }
 
-.stay {
+.tile.stay {
     background-color: #f00;
+}
+
+.tile.stay:hover {
+    background-color: #000;
 }
