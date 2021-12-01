@@ -4,7 +4,7 @@ addEventListener("load", () => {
     "--repeat-time"
   );
 
-  for (let i = 0; i < Math.pow(tileSize, 2); i++) {
+  for (let i = 0; i < Math.pow(repeatTime, 2); i++) {
     let tile = document.createElement("div");
     tile.classList.add("tile");
     tileContainer.appendChild(tile);
