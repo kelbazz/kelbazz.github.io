@@ -1,10 +1,10 @@
 document.documentElement.style.setProperty(
   "--repeat-x",
-  window.innerWidth / 10
+  window.innerWidth / 5
 );
 document.documentElement.style.setProperty(
   "--repeat-y",
-  window.innerHeight / 10
+  window.innerHeight / 5
 );
 
 let tileContainer = document.querySelector("#tile-container");
