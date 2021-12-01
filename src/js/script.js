@@ -15,4 +15,4 @@ for (let i = 0; i < Math.pow(repeatTime, 2); i++) {
 
 setInterval(() => {
   tiles[Math.floor(Math.random() * tiles.length)].click();
-});
+}, 1000);
