@@ -1,9 +1,12 @@
 let tileContainer = document.querySelector("#tile-container");
-let repeatTime = getComputedStyle(document.documentElement).getPropertyValue(
-  "--repeat-time"
+let repeatX = getComputedStyle(document.documentElement).getPropertyValue(
+  "--repeat-x"
+);
+let repeatY = getComputedStyle(document.documentElement).getPropertyValue(
+  "--repeat-y"
 );
 
-for (let i = 0; i < Math.pow(repeatTime, 2); i++) {
+for (let i = 0; i < repeatX * repeatY; i++) {
   let tile = document.createElement("div");
   tile.classList.add("tile");
   tile.addEventListener("click", () => {
