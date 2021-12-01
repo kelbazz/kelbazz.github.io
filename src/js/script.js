@@ -4,7 +4,7 @@ document.documentElement.style.setProperty(
 );
 document.documentElement.style.setProperty(
   "--repeat-y",
-  10 / window.innerHeight * 100
+  10 / window.innerHeight * 100,
 );
 
 let tileContainer = document.querySelector("#tile-container");
