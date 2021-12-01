@@ -1,6 +1,6 @@
 document.documentElement.style.setProperty(
   "--repeat-x",
-  window.innerWidth / 5
+  window.innerWidth / 5,
 );
 document.documentElement.style.setProperty(
   "--repeat-y",
