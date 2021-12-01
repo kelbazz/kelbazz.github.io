@@ -12,7 +12,7 @@ for (let i = 0; i < Math.pow(repeatTime, 2); i++) {
   tileContainer.appendChild(tile);
 }
 
-let tiles = document.querySelectorAll(".tile");
+let tiles = tileContainer.querySelectorAll(".tile");
 
 setInterval(() => {
   tiles[Math.floor(Math.random() * tiles.length)].click();
