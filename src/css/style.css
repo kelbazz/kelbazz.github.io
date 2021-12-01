@@ -28,6 +28,7 @@ body {
 .tile {
     transition: all .5s ease;
     background-color: #000;
+    pointer-events: none;
 }
 
 .tile:hover {
