@@ -25,11 +25,11 @@ body {
     grid-auto-flow: row;
 }
 
-#tile {
+.tile {
     transition: all .5s ease;
     background-color: #000;
 }
 
-#tile:hover {
+.tile:hover {
     background-color: #f00;
 }
