@@ -18,9 +18,9 @@ body {
     height: 100%;
 
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(var(--repeat-time), var(--tile-size));
     grid-template-rows: repeat(var(--repeat-time), var(--tile-size));
-    grid-auto-columns: repeat(var(--repeat-time), var(--tile-size));
+    grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
 }
