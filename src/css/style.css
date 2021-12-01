@@ -9,8 +9,8 @@ body {
 }
 
 :root {
-    --tile-size: 1fr;
-    --repeat-time: 10;
+    --repeat-x: 10;
+    --repeat-y: 10;
 }
 
 #tile-container {
@@ -18,8 +18,8 @@ body {
     height: 100%;
 
     display: grid;
-    grid-template-columns: repeat(var(--repeat-time), var(--tile-size));
-    grid-template-rows: repeat(var(--repeat-time), var(--tile-size));
+    grid-template-columns: repeat(var(--repeat-y), 1fr);
+    grid-template-rows: repeat(var(--repeat-x), 1fr);
     grid-auto-columns: 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
