@@ -1,7 +1,4 @@
-document.documentElement.style.setProperty(
-  "--repeat-x",
-  window.innerWidth / 5
-);
+document.documentElement.style.setProperty("--repeat-x", window.innerWidth / 5);
 document.documentElement.style.setProperty(
   "--repeat-y",
   window.innerHeight / 5
@@ -29,3 +26,12 @@ let tiles = tileContainer.querySelectorAll(".tile");
 setInterval(() => {
   tiles[Math.floor(Math.random() * tiles.length)].click();
 }, 500);
+
+function getDivider(divider, result) {
+  let i = 0;
+
+  while (divider / i != result) {
+    i++;
+  }
+  return i;
+}
