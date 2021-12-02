@@ -27,6 +27,8 @@ setInterval(() => {
 function getDivider(divider, result) {
   let i = 0;
 
+  if (divider % result != 0) return;
+
   while (divider / i != result) {
     i++;
   }
