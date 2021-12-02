@@ -1,11 +1,11 @@
-// document.documentElement.style.setProperty(
-//   "--repeat-x",
-//   getDivider(window.innerWidth, 10)
-// );
-// document.documentElement.style.setProperty(
-//   "--repeat-y",
-//   getDivider(window.innerHeight, 10)
-// );
+document.documentElement.style.setProperty(
+  "--repeat-x",
+  getDivider(window.innerWidth, 10)
+);
+document.documentElement.style.setProperty(
+  "--repeat-y",
+  getDivider(window.innerHeight, 10)
+);
 
 let tileContainer = document.querySelector("#tile-container");
 let repeatX = getComputedStyle(document.documentElement).getPropertyValue(
@@ -29,3 +29,12 @@ let tiles = tileContainer.querySelectorAll(".tile");
 setInterval(() => {
   tiles[Math.floor(Math.random() * tiles.length)].click();
 }, 500);
+
+function getDivider(divider, result) {
+  let i = 0;
+
+  while (Math.floor(divider / i) != result) {
+    i++;
+  }
+  return i;
+}
