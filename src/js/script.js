@@ -1,5 +1,11 @@
-document.documentElement.style.setProperty("--repeat-x", 10);
-document.documentElement.style.setProperty("--repeat-y", 10);
+document.documentElement.style.setProperty(
+  "--repeat-x",
+  getDivider(window.innerWidth, 10)
+);
+document.documentElement.style.setProperty(
+  "--repeat-y",
+  getDivider(window.innerHeight, 10)
+);
 
 let tileContainer = document.querySelector("#tile-container");
 let repeatX = getComputedStyle(document.documentElement).getPropertyValue(
@@ -27,7 +33,7 @@ setInterval(() => {
 function getDivider(divider, result) {
   let i = 0;
 
-  if (divider % result != 0) return;
+  if (divider % result != 0) return 10;
 
   while (divider / i != result) {
     i++;
