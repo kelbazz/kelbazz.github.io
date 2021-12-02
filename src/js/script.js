@@ -33,7 +33,7 @@ setInterval(() => {
 function getDivider(divider, result) {
   let i = 0;
 
-  if (divider % result != 0) return 10;
+  if (divider % result != 0) return divider % result;
 
   while (divider / i != result) {
     i++;
