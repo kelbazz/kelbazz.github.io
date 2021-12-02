@@ -37,13 +37,13 @@ html {
 }
 
 .tile:hover {
-    background-color: #f00;
+    background-color: #09f;
 }
 
 .tile.stay {
-    background-color: #f00;
+    background-color: #09f;
 }
 
 .tile.stay:hover {
-    background-color: #000;
+    background-color: #0f1020;
 }
