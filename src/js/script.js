@@ -1,10 +1,10 @@
 document.documentElement.style.setProperty(
   "--repeat-x",
-  getDivider(window.innerWidth, 10)
+  getDivider(window.innerWidth, 100)
 );
 document.documentElement.style.setProperty(
   "--repeat-y",
-  getDivider(window.innerHeight, 10)
+  getDivider(window.innerHeight, 100)
 );
 
 let tileContainer = document.querySelector("#tile-container");
