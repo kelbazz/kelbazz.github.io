@@ -1,8 +1,5 @@
-document.documentElement.style.setProperty("--repeat-x", window.innerWidth / 5);
-document.documentElement.style.setProperty(
-  "--repeat-y",
-  window.innerHeight / 5
-);
+document.documentElement.style.setProperty("--repeat-x", 10);
+document.documentElement.style.setProperty("--repeat-y", 10);
 
 let tileContainer = document.querySelector("#tile-container");
 let repeatX = getComputedStyle(document.documentElement).getPropertyValue(
