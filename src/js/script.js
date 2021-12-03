@@ -1,10 +1,10 @@
 document.documentElement.style.setProperty(
   "--repeat-x",
-  getDivider(window.innerWidth, 5)
+  getDivider(window.innerWidth, 10)
 );
 document.documentElement.style.setProperty(
   "--repeat-y",
-  getDivider(window.innerHeight, 5)
+  getDivider(window.innerHeight, 10)
 );
 
 let tileContainer = document.querySelector("#tile-container");
@@ -30,11 +30,9 @@ setInterval(() => {
   tiles[Math.floor(Math.random() * tiles.length)].click();
 }, 500);
 
-function getDivider(divider, result) {
-  let i = 0;
-
-  while (Math.floor(divider / i) != result) {
-    i++;
+function gcd(a, b) {
+  if (b === 0) {
+    return a;
   }
-  return i;
+  return gcd(b, a % b);
 }
