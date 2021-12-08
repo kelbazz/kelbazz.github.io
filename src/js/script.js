@@ -63,3 +63,5 @@ document.addEventListener("DOMContentLoaded", function () {
       colors[Math.floor(Math.random() * colors.length)];
   });
 });
+
+document.body.style.transition = 'background-color 0.2s';
