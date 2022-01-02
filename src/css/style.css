@@ -8,45 +8,6 @@ body {
     height: 100vh;
 }
 
-html {
-    --repeat-x: 10;
-    --repeat-y: 11;
-}
-
-#tile-container {
-    width: 100%;
-    height: 100%;
-
-    display: grid;
-    grid-template-columns: repeat(var(--repeat-y), 1fr);
-    grid-template-rows: repeat(var(--repeat-x), 1fr);
-    grid-auto-columns: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-}
-
-.tile {
-    transition: all .5s ease;
-    background-color: #000;
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-
-    /* height: 100px;
-    width: 100px; */
-}
-
-.tile:hover {
-    background-color: #09f;
-}
-
-.tile.stay {
-    background-color: #09f;
-}
-
-.tile.stay:hover {
-    background-color: #0f1020;
+#canvas {
+    border: 1px solid black;
 }
