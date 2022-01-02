@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *, ::before, ::after {
     padding: 0;
     margin: 0;
@@ -6,8 +8,21 @@
 body {
     width: 100vw;
     height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: Lexend, Arial, Helvetica, sans-serif;
 }
 
 #canvas {
-    border: 1px solid black;
+    position: absolute;
+
+    z-index: 1;
+}
+
+#centered {
+    color: #0f1020;
 }
