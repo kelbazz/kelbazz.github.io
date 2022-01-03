@@ -131,7 +131,7 @@ let kexp = {
         let y = Math.random() * (canvas.height + r) - r;
         let c = "rgb(15, 16, 32)";
         let cl = "rgb(0, 153, 255)";
-        let s = Math.random() * 2 + 1;
+        let s = Math.random() * 0.5;
         let v = {
           x: Math.random() - 0.5,
           y: Math.random() - 0.5,
