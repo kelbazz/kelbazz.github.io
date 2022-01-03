@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  overflow: hidden;
+}
+
+* {
+  cursor: url(../img/cursor.png), default;
+}
+
+.os-container {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Lexend, sans-serif;
+}
+
+.loader,
+.desktop {
+  height: 100%;
+  width: 100%;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0f1020;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.desktop>.desk {
+  width: 50px;
+  min-height: 80%;
+  max-height: 95%;
+  overflow: auto;
+  background: #4e4e4eee;
+  border-radius: 25px;
+  margin-right: 30px;
+  padding: 20px 0;
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.window {
+  position: absolute;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.window-header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.window-content {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.resizer {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background-color .2s ease;
+}
+
+.resizer:hover {
+  background-color: #0f102055;
+}
+
+.resizer.nw {
+  top: 0;
+  left: 0;
+  cursor: url(../img/cursor.png), nwse-resize;
+}
+
+.resizer.ne {
+  top: 0;
+  right: 0;
+  cursor: url(../img/cursor.png), nesw-resize;
+}
+
+.resizer.se {
+  bottom: 0;
+  right: 0;
+  cursor: url(../img/cursor.png), nwse-resize;
+}
+
+.resizer.sw {
+  bottom: 0;
+  left: 0;
+  cursor: url(../img/cursor.png), nesw-resize;
+}
+
+.desk-icon {
+  margin-bottom: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.window.current {
+  z-index: 1;
+}
+
+.notification-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.notification {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 300px;
+  min-height: 100px;
+
+  padding: 10px;
+  margin: 5px;
+
+  border-radius: 10px;
+  background: #fff;
+  overflow: auto;
+}
+
+.cs-move {
+  cursor: url(../img/cursor.png), move;
+}
+
+.cs-pointer {
+  cursor: url(../img/cursor.png), pointer;
+}
+
+.cs-default {
+  cursor: url(../img/cursor.png), default;
+}
+
+.cs-wait {
+  cursor: url(../img/cursor.png), wait;
+}
+
+.text-not-selectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

@@ -1,0 +1,48 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: Lexend, Arial, Helvetica, sans-serif;
+
+    background-color: #ffffff;
+}
+
+#canvas {
+    position: absolute;
+    cursor: none;
+}
+
+#centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+
+    min-width: 500px;
+    min-height: 500px;
+
+    color: rgb(15, 16, 32);
+
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+#centered>svg {
+    height: 35%;
+    width: auto;
+}
