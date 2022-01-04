@@ -25,7 +25,32 @@ let kos = {
               <div class="notification-container"></div>
               <div class="desk"></div>
               `;
-      osDiv.removeChild(osDiv.querySelector(".loader"));
+
+      /*/ Create the desk visibility system /*/
+
+      osDiv.addEventListener("mousemove", (e) => {
+        if (e.clientX >= innerWidth - 100)
+          osDiv.querySelector(".desk").classList.add("shown");
+        else osDiv.querySelector(".desk").classList.remove("shown");
+      });
+
+      /*/ Create the title change system /*/
+
+      let title = document.title;
+
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          document.title = "Good bye!";
+          setTimeout(() => {
+            document.title = title;
+          }, 1000);
+        } else {
+          document.title = "Welcome back!";
+          setTimeout(() => {
+            document.title = title;
+          }, 1000);
+        }
+      });
 
       /*/ Redefining some JavaScript functions /*/
 
@@ -155,8 +180,11 @@ let kos = {
           title: "Console",
           height: 400,
           width: 660,
+
+          posX: innerWidth / 2 - 660 / 2,
+          posY: 30,
+
           closable: 0,
-          maximizable: 0,
           minimizable: 0,
           icon: "https://open-os.netlify.app/system/ressources/icon/terminal.png",
         }).hide();
@@ -215,7 +243,7 @@ let kos = {
           width: 480,
 
           posX: innerWidth / 2 - 480 / 2,
-          posY: innerHeight / 2 + 150,
+          posY: innerHeight - 250,
 
           content: `
           <div id="kelbaz-root">
@@ -282,7 +310,7 @@ let kos = {
             width: 630,
 
             posX: innerWidth / 2 - 630 / 2,
-            posY: innerHeight / 2 - 350,
+            posY: 30,
 
             headerColor: "#010409",
 
@@ -291,7 +319,9 @@ let kos = {
               <b>IFrame is unavailable here</b>
             </iframe>
             `,
-          }).show();
+          })
+            .show()
+            .getContent().style.overflow = "hidden";
         };
         body.querySelector(".kelbaz-btn-2").onclick = () => {
           new kos.StandardWindow({
@@ -302,7 +332,7 @@ let kos = {
             width: 480,
 
             posX: innerWidth / 2 - 480 / 2,
-            posY: innerHeight / 2 - 250,
+            posY: 30,
 
             content: `
             <div id="kelbaz-about-root">
@@ -339,6 +369,8 @@ let kos = {
           termWnd.toggleVisibility();
         };
       })();
+
+      osDiv.removeChild(osDiv.querySelector(".loader"));
     });
   },
   /**
