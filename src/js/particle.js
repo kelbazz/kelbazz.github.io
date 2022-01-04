@@ -24,8 +24,8 @@ let rgb;
 const initialiseElements = () => {
   for (let i = 0; i < 150; i++) {
     let r = Math.random() * 2 + 1;
-    let x = Math.random() * (canvas.width + r) - r;
-    let y = Math.random() * (canvas.height + r) - r;
+    let x = Math.random() * (canvas.width - r * 2);
+    let y = Math.random() * (canvas.height - r * 2);
     let c = "rgb(15, 16, 32)";
     let cl = "rgb(0, 153, 255)";
     let s = Math.random() * 0.5;
@@ -127,8 +127,8 @@ let kexp = {
     add: (n) => {
       for (let i = 0; i < n; i++) {
         let r = Math.random() * 2 + 1;
-        let x = Math.random() * (canvas.width + r) - r;
-        let y = Math.random() * (canvas.height + r) - r;
+        let x = Math.random() * (canvas.width - r * 2);
+        let y = Math.random() * (canvas.height - r * 2);
         let c = "rgb(15, 16, 32)";
         let cl = "rgb(0, 153, 255)";
         let s = Math.random() * 0.5;
@@ -145,6 +145,6 @@ let kexp = {
       for (let i = 0; i < n; i++) {
         particles.shift();
       }
-    }
+    },
   },
 };
