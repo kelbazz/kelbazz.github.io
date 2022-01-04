@@ -89,7 +89,7 @@ const animationLoop = () => {
 
   particles.forEach((particle) => {
     particle.update();
-    linkParticles(mouse, particle, 200);
+    linkParticles(mouse, particle, 100);
 
     particles.forEach((particle2) => {
       linkParticles(particle, particle2, 100);
