@@ -534,7 +534,7 @@ let kos = {
                   }
                   ${
                     this.params.maximizable
-                      ? '<span class="maximize-btn cs-pointer">🗖</span>'
+                      ? '<span class="maximize-btn cs-pointer">🞐</span>'
                       : ""
                   }
                   ${
