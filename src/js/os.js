@@ -371,12 +371,9 @@ let kos = {
 
         // loading all scripts in data.json
 
-        fetch("/data.json")
-          .then((r) => {
-            console.log(r);
-            r.json();
-          })
-          .then((json) => {
+        fetch("/data.json").then((r) => {
+          console.log(r);
+          r.json().then((json) => {
             console.log(json);
             json.forEach((data) => {
               switch (data.type) {
@@ -392,6 +389,7 @@ let kos = {
               }
             });
           });
+        });
       })();
 
       osDiv.removeChild(osDiv.querySelector(".loader"));
