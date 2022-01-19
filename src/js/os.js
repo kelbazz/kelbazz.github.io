@@ -244,7 +244,7 @@ let kos = {
 
       /*/ Create the main window /*/
       (() => {
-        if (flags.includes("hide_main_wnd")) {
+        if (!flags.includes("hide_main_wnd")) {
           let kebazWnd = new kos.StandardWindow({
             closable: false,
             resizable: false,
