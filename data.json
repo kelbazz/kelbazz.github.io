@@ -1,0 +1,15 @@
+[
+  {
+    "type": "ntf",
+    "params": {
+      "content": "test"
+    }
+  },
+  {
+    "type": "ntf",
+    "params": {
+      "content": "test2",
+      "timeout": 0
+    }
+  }
+]
