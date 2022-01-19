@@ -373,9 +373,11 @@ let kos = {
 
         fetch("/data.json")
           .then((r) => {
+            console.log(r);
             r.json();
           })
           .then((json) => {
+            console.log(json);
             json.forEach((data) => {
               switch (data.type) {
                 case "wnd":
