@@ -5,6 +5,9 @@ let kos = {
    * Init the system.
    */
   main: () => {
+    let flags = location.hash ? JSON.parse(location.hash) : [];
+    console.log("Flags: ", flags);
+
     window.addEventListener("load", () => {
       let osDiv = document.querySelector(".os-container");
 
@@ -28,11 +31,15 @@ let kos = {
 
       /*/ Create the desk visibility system /*/
 
-      osDiv.addEventListener("mousemove", (e) => {
-        if (e.clientX >= innerWidth - 100)
-          osDiv.querySelector(".desk").classList.add("shown");
-        else osDiv.querySelector(".desk").classList.remove("shown");
-      });
+      if (flags.includes("hide_desk")) {
+        osDiv.querySelector(".desk").style.display = "none";
+      } else {
+        osDiv.addEventListener("mousemove", (e) => {
+          if (e.clientX >= innerWidth - 100)
+            osDiv.querySelector(".desk").classList.add("shown");
+          else osDiv.querySelector(".desk").classList.remove("shown");
+        });
+      }
 
       /*/ Create the title change system /*/
 
@@ -187,7 +194,7 @@ let kos = {
           closable: 0,
           minimizable: 0,
           icon: "https://open-os.netlify.app/system/ressources/icon/terminal.png",
-        }).hide();
+        });
 
         let body = termWnd.getContent();
 
@@ -229,12 +236,16 @@ let kos = {
               });
             }
           });
+
+        flags.includes("show_term") ? termWnd.show() : termWnd.hide();
       })();
 
       /*/ Create the main window /*/
       (() => {
         let kebazWnd = new kos.StandardWindow({
           closable: false,
+          resizable: false,
+          maximizable: false,
 
           title: "Kelbaz!",
           icon: "./src/img/main_icon.png",
@@ -297,7 +308,7 @@ let kos = {
             }
           </style>
           `,
-        }).show();
+        });
 
         let body = kebazWnd.getContent();
 
@@ -369,27 +380,29 @@ let kos = {
           termWnd.toggleVisibility();
         };
 
-        // loading all scripts in data.json
+        flags.includes("hide_main_wnd") ? kebazWnd.hide() : kebazWnd.show();
+      })();
 
-        fetch("/data.json").then((r) => {
-          r.json().then((json) => {
-            json.forEach((data) => {
-              switch (data.type) {
-                case "wnd":
-                  new kos.StandardWindow(data.params).show();
-                  break;
+      // loading all scripts in data.json
 
-                case "ntf":
-                  new kos.StandardNotification(data.params);
-                  break;
+      fetch("/data.json").then((r) => {
+        r.json().then((json) => {
+          json.forEach((data) => {
+            switch (data.type) {
+              case "wnd":
+                new kos.StandardWindow(data.params).show();
+                break;
 
-                default:
-                  break;
-              }
-            });
+              case "ntf":
+                new kos.StandardNotification(data.params);
+                break;
+
+              default:
+                break;
+            }
           });
         });
-      })();
+      });
 
       osDiv.removeChild(osDiv.querySelector(".loader"));
     });
