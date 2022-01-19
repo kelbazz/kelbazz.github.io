@@ -5,7 +5,9 @@ let kos = {
    * Init the system.
    */
   main: () => {
-    let flags = location.hash ? JSON.parse(location.hash) : [];
+    let flags = location.hash
+      ? JSON.parse(decodeURI(location.hash.slice(1)))
+      : [];
     console.log("Flags: ", flags);
 
     window.addEventListener("load", () => {
