@@ -312,10 +312,10 @@ let kos = {
             posX: innerWidth / 2 - 630 / 2,
             posY: 30,
 
-            headerColor: "#010409",
+            headerColor: "#0d1117",
 
             content: `
-            <iframe style="height:100%; width:100%;" src="https://github.com/onofficiel">
+            <iframe style="height:100%; width:100%; border: none;" src="https://github.com/onofficiel">
               <b>IFrame is unavailable here</b>
             </iframe>
             `,
