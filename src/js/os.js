@@ -389,24 +389,26 @@ let kos = {
 
       // loading all scripts in data.json
 
-      fetch("/data.json").then((r) => {
-        r.json().then((json) => {
-          json.forEach((data) => {
-            switch (data.type) {
-              case "wnd":
-                new kos.StandardWindow(data.params).show();
-                break;
+      if (!flags.includes("no_subscript")) {
+        fetch("/data.json").then((r) => {
+          r.json().then((json) => {
+            json.forEach((data) => {
+              switch (data.type) {
+                case "wnd":
+                  new kos.StandardWindow(data.params).show();
+                  break;
 
-              case "ntf":
-                new kos.StandardNotification(data.params);
-                break;
+                case "ntf":
+                  new kos.StandardNotification(data.params);
+                  break;
 
-              default:
-                break;
-            }
+                default:
+                  break;
+              }
+            });
           });
         });
-      });
+      }
 
       osDiv.removeChild(osDiv.querySelector(".loader"));
     });
