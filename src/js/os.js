@@ -408,7 +408,7 @@ let kos = {
         });
       }
 
-      osDiv.removeChild(osDiv.querySelector(".loader"));
+      document.body.removeChild(document.querySelector(".loader"));
     });
   },
   /**
