@@ -347,7 +347,6 @@ window.kos = {
           });
 
           let body = kelbazWnd.getContent();
-          console.log(kelbazWnd, body);
 
           body.querySelector(".kelbaz-btn-2").onclick = () => {
             new kos.StandardWindow({
