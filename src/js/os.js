@@ -334,7 +334,7 @@ window.kos = {
               maximizable: false,
 
               posX: innerWidth - 630 - 100,
-              posY: innerWidth / 2 - 450 / 2,
+              posY: innerHeight / 2 - 450 / 2,
 
               headerColor: "#ffffff",
               headerTextColor: "#0099ff",
