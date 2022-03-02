@@ -752,7 +752,9 @@ window.kos = {
           let prevX = e.clientX;
           let prevY = e.clientY;
 
-          wnd.querySelector(".window-content").style.pointerEvents = "none";
+          document.querySelectorAll(".window-content").forEach((content) => {
+            content.style.pointerEvents = "none";
+          });
 
           window.addEventListener("mousemove", mousemove);
           window.addEventListener("mouseup", mouseup);
@@ -773,7 +775,9 @@ window.kos = {
           }
 
           function mouseup() {
-            wnd.querySelector(".window-content").style.pointerEvents = "auto";
+            document.querySelectorAll(".window-content").forEach((content) => {
+              content.style.pointerEvents = "auto";
+            });
             window.removeEventListener("mouseup", mouseup);
             window.removeEventListener("mousemove", mousemove);
           }
@@ -798,7 +802,9 @@ window.kos = {
             currentResizer = e.target;
             let isResizing = true;
 
-            wnd.querySelector(".window-content").style.pointerEvents = "none";
+            document.querySelectorAll(".window-content").forEach((content) => {
+              content.style.pointerEvents = "none";
+            });
 
             let prevX = e.clientX;
             let prevY = e.clientY;
@@ -834,7 +840,11 @@ window.kos = {
             }
 
             function mouseup() {
-              wnd.querySelector(".window-content").style.pointerEvents = "auto";
+              document
+                .querySelectorAll(".window-content")
+                .forEach((content) => {
+                  content.style.pointerEvents = "auto";
+                });
               window.removeEventListener("mousemove", mousemove);
               window.removeEventListener("mouseup", mouseup);
               isResizing = false;
