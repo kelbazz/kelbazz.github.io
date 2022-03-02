@@ -336,7 +336,7 @@ window.kos = {
               posX: innerWidth - 630 - 100,
               posY: innerWidth / 2 - 450,
 
-              headerColor: "#0099ff",
+              headerColor: "#ffffff",
 
               content: `
             <iframe style="height:100%; width:100%; border: none;" src="apps/launcher">
