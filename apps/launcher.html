@@ -68,7 +68,10 @@
               <span class="name">${app.name}</span>
             `;
             tile.addEventListener("click", () => {
-              location.href = app.url;
+              const wnd = new parent.window.kos.StandardWindow({
+                title: app.name,
+                content: `<iframe style="border:none;width:100%;height:100%;" src="${app.url}">Can't show the app !</iframe>`,
+              }).show();
             });
 
             document.querySelector("#app-container").appendChild(tile);
