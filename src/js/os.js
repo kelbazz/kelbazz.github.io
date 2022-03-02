@@ -325,13 +325,13 @@ window.kos = {
           body.querySelector(".kelbaz-btn-1").onclick = () => {
             new kos.StandardWindow({
               title: "Apps",
-              // icon: "./src/img/github_logo.png",
 
               height: 450,
               width: 630,
 
               resizable: false,
               maximizable: false,
+              closable: false,
 
               posX: innerWidth - 630 - 100,
               posY: innerHeight / 2 - 450 / 2,

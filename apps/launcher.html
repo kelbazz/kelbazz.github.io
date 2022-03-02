@@ -68,10 +68,12 @@
               <span class="name">${app.name}</span>
             `;
             tile.addEventListener("click", () => {
-              const wnd = new parent.window.kos.StandardWindow({
+              const wnd = (new parent.window.kos.StandardWindow({
                 title: app.name,
                 content: `<iframe style="border:none;width:100%;height:100%;" src="${app.url}">Can't show the app !</iframe>`,
-              }).show();
+              })
+                .show()
+                .getContent().style.overflow = "hidden");
             });
 
             document.querySelector("#app-container").appendChild(tile);
