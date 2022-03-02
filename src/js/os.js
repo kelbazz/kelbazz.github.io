@@ -330,6 +330,10 @@ window.kos = {
               height: 450,
               width: 630,
 
+              resizable: false,
+              minimizable: false,
+              maximizable: false,
+
               posX: innerWidth / 2 - 630 / 2,
               posY: 30,
 
