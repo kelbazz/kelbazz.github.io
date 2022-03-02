@@ -333,8 +333,8 @@ window.kos = {
               resizable: false,
               maximizable: false,
 
-              posX: innerWidth / 2 - 630 / 2,
-              posY: 30,
+              posX: innerWidth - 630 - 100,
+              posY: innerWidth / 2 - 450,
 
               headerColor: "#0099ff",
 
@@ -749,7 +749,6 @@ window.kos = {
           let prevX = e.clientX;
           let prevY = e.clientY;
 
-          
           wnd.querySelector(".window-content").style.pointerEvents = "none";
 
           window.addEventListener("mousemove", mousemove);
