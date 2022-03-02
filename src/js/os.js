@@ -352,7 +352,6 @@ window.kos = {
 
           let body = kebazWnd.getContent();
 
-          body.querySelector(".kelbaz-btn-1").onclick = () => {};
           body.querySelector(".kelbaz-btn-2").onclick = () => {
             new kos.StandardWindow({
               title: "About",
