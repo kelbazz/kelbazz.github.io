@@ -746,8 +746,8 @@ let kos = {
           let prevX = e.clientX;
           let prevY = e.clientY;
 
-          console.log(wnd.querySelector(".window-content"));
-          wnd.querySelector(".window-content").style.pointerEvent = "none";
+          
+          wnd.querySelector(".window-content").style.pointerEvents = "none";
 
           window.addEventListener("mousemove", mousemove);
           window.addEventListener("mouseup", mouseup);
@@ -768,7 +768,7 @@ let kos = {
           }
 
           function mouseup() {
-            wnd.querySelector(".window-content").style.pointerEvent = "auto";
+            wnd.querySelector(".window-content").style.pointerEvents = "auto";
             window.removeEventListener("mouseup", mouseup);
             window.removeEventListener("mousemove", mousemove);
           }
