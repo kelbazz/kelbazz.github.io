@@ -355,7 +355,7 @@ let kos = {
                 Hello I'm Kelbaz! I'm a french developper passionned by programation and
                 graphism.<br />
                 I know JavaScript, HTML, CSS and I am learning Python.<br />
-                I made some projects and they are all open source, so check out my <a href="https://github.com/onofficiel">github</a> if
+                I made some projects and they are all open source, so check out my <a color="#ffffff" href="https://github.com/onofficiel">github</a> if
                 your intrested!
               </p>
             </div>
