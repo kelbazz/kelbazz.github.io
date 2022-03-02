@@ -13,8 +13,8 @@
       let toggled = false;
       document.querySelector("#toggle").addEventListener("click", () => {
         parent.window.document.querySelector(".os-container").style.filter =
-          toggled ? "url('#goo-filter');" : "none";
-        toggled = !!toggled;
+          toggled ? "none" : "url('#goo-filter');";
+        toggled = !toggled;
       });
     </script>
   </body>
