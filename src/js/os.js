@@ -746,6 +746,8 @@ let kos = {
           let prevX = e.clientX;
           let prevY = e.clientY;
 
+          winDiv.querySelector("window-header").style.pointerEvent = "none";
+
           window.addEventListener("mousemove", mousemove);
           window.addEventListener("mouseup", mouseup);
 
@@ -765,6 +767,7 @@ let kos = {
           }
 
           function mouseup() {
+            winDiv.querySelector("window-header").style.pointerEvent = "auto";
             window.removeEventListener("mouseup", mouseup);
             window.removeEventListener("mousemove", mousemove);
           }
