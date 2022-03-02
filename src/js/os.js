@@ -395,7 +395,7 @@ window.kos = {
             termWnd.toggleVisibility();
           };
 
-          kebazWnd.show();
+          kelbazWnd.show();
         }
       })();
 
