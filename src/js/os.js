@@ -249,28 +249,54 @@ window.kos = {
         flags.includes("show_term") ? termWnd.show() : termWnd.hide();
       })();
 
-      /*/ Create the main window /*/
       (() => {
-        if (!flags.includes("hide_main_wnd")) {
-          let kebazWnd = new kos.StandardWindow({
-            closable: false,
-            resizable: false,
-            maximizable: false,
+        new kos.StandardWindow({
+          title: "Apps",
 
-            title: "Kelbaz!",
-            icon: "./src/img/main_icon.png",
+          height: 450,
+          width: 630,
 
-            height: 220,
-            width: 480,
+          resizable: false,
+          maximizable: false,
+          closable: false,
 
-            posX: innerWidth / 2 - 480 / 2,
-            posY: innerHeight - 250,
+          posX: innerWidth - 630 - 100,
+          posY: innerHeight / 2 - 450 / 2,
 
-            content: `
+          headerColor: "#ffffff",
+          headerTextColor: "#0099ff",
+
+          content: `
+        <iframe style="height:100%; width:100%; border: none;" src="apps/launcher">
+          <b>IFrame is unavailable here</b>
+        </iframe>
+        `,
+        })
+          .show()
+          .getContent().style.overflow = "hidden";
+      })()(
+        /*/ Create the main window /*/
+        () => {
+          if (!flags.includes("hide_main_wnd")) {
+            let kebazWnd = new kos.StandardWindow({
+              closable: false,
+              resizable: false,
+              maximizable: false,
+
+              title: "Kelbaz!",
+              icon: "./src/img/main_icon.png",
+
+              height: 220,
+              width: 480,
+
+              posX: innerWidth / 2 - 480 / 2,
+              posY: innerHeight - 250,
+
+              content: `
           <div id="kelbaz-root">
             <h1>Welcome to my website !</h1>
             <div class="kelbaz-button-container">
-              <button class="kelbaz-btn-1">Apps</button>
+              `/* <button class="kelbaz-btn-1">Apps</button> */ `
               <button class="kelbaz-btn-2">About</button>
               <button class="kelbaz-btn-3">Terminal</button>
             </div>
@@ -318,48 +344,23 @@ window.kos = {
             }
           </style>
           `,
-          });
+            });
 
-          let body = kebazWnd.getContent();
+            let body = kebazWnd.getContent();
 
-          body.querySelector(".kelbaz-btn-1").onclick = () => {
-            new kos.StandardWindow({
-              title: "Apps",
+            body.querySelector(".kelbaz-btn-1").onclick = () => {};
+            body.querySelector(".kelbaz-btn-2").onclick = () => {
+              new kos.StandardWindow({
+                title: "About",
+                icon: "./src/img/about_icon.png",
 
-              height: 450,
-              width: 630,
+                height: 220,
+                width: 480,
 
-              resizable: false,
-              maximizable: false,
-              closable: false,
+                posX: innerWidth / 2 - 480 / 2,
+                posY: 30,
 
-              posX: innerWidth - 630 - 100,
-              posY: innerHeight / 2 - 450 / 2,
-
-              headerColor: "#ffffff",
-              headerTextColor: "#0099ff",
-
-              content: `
-            <iframe style="height:100%; width:100%; border: none;" src="apps/launcher">
-              <b>IFrame is unavailable here</b>
-            </iframe>
-            `,
-            })
-              .show()
-              .getContent().style.overflow = "hidden";
-          };
-          body.querySelector(".kelbaz-btn-2").onclick = () => {
-            new kos.StandardWindow({
-              title: "About",
-              icon: "./src/img/about_icon.png",
-
-              height: 220,
-              width: 480,
-
-              posX: innerWidth / 2 - 480 / 2,
-              posY: 30,
-
-              content: `
+                content: `
             <div id="kelbaz-about-root">
               <h1>About me!</h1>
               <p>
@@ -388,15 +389,16 @@ window.kos = {
               }
             </style>
             `,
-            }).show();
-          };
-          body.querySelector(".kelbaz-btn-3").onclick = () => {
-            termWnd.toggleVisibility();
-          };
+              }).show();
+            };
+            body.querySelector(".kelbaz-btn-3").onclick = () => {
+              termWnd.toggleVisibility();
+            };
 
-          kebazWnd.show();
+            kebazWnd.show();
+          }
         }
-      })();
+      )();
 
       // loading all scripts in data.json
 
