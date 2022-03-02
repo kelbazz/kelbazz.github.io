@@ -746,6 +746,7 @@ let kos = {
           let prevX = e.clientX;
           let prevY = e.clientY;
 
+          console.log(wnd.querySelector(".window-content"));
           wnd.querySelector(".window-content").style.pointerEvent = "none";
 
           window.addEventListener("mousemove", mousemove);
