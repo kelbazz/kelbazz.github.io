@@ -326,7 +326,7 @@ let kos = {
               posX: innerWidth / 2 - 630 / 2,
               posY: 30,
 
-              headerColor: "#0d1117",
+              headerColor: "#0099ff",
 
               content: `
             <iframe style="height:100%; width:100%; border: none;" src="apps/launcher">
