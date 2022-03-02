@@ -717,6 +717,11 @@ let kos = {
       }
     }
 
+    setTitle(str) {
+      this.winDiv.params.title = str;
+      this.winDiv.querySelector(".window-header>.title").innerText = str;
+    }
+
     /**
      * Make the window draggable.
      */
