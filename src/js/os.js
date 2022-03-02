@@ -279,7 +279,7 @@ window.kos = {
       /*/ Create the main window /*/
       (() => {
         if (!flags.includes("hide_main_wnd")) {
-          let kebazWnd = new kos.StandardWindow({
+          let kelbazWnd = new kos.StandardWindow({
             closable: false,
             resizable: false,
             maximizable: false,
@@ -293,14 +293,10 @@ window.kos = {
             posX: innerWidth / 2 - 480 / 2,
             posY: innerHeight - 250,
 
-            content:
-              `
+            content: `
           <div id="kelbaz-root">
             <h1>Welcome to my website !</h1>
             <div class="kelbaz-button-container">
-              ` +
-              /* <button class="kelbaz-btn-1">Apps</button> */
-              +`
               <button class="kelbaz-btn-2">About</button>
               <button class="kelbaz-btn-3">Terminal</button>
             </div>
@@ -350,7 +346,8 @@ window.kos = {
           `,
           });
 
-          let body = kebazWnd.getContent();
+          let body = kelbazWnd.getContent();
+          console.log(kelbazWnd, body);
 
           body.querySelector(".kelbaz-btn-2").onclick = () => {
             new kos.StandardWindow({
