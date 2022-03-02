@@ -263,7 +263,7 @@ let kos = {
           <div id="kelbaz-root">
             <h1>Welcome to my website !</h1>
             <div class="kelbaz-button-container">
-              <button class="kelbaz-btn-1">Github</button>
+              <button class="kelbaz-btn-1">Apps</button>
               <button class="kelbaz-btn-2">About</button>
               <button class="kelbaz-btn-3">Terminal</button>
             </div>
@@ -318,7 +318,7 @@ let kos = {
           body.querySelector(".kelbaz-btn-1").onclick = () => {
             new kos.StandardWindow({
               title: "Apps",
-              icon: "./src/img/github_logo.png",
+              // icon: "./src/img/github_logo.png",
 
               height: 450,
               width: 630,
