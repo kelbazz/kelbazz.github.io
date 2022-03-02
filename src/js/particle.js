@@ -26,7 +26,7 @@ const initialiseElements = () => {
     let r = Math.random() * 2 + 1;
     let x = Math.random() * (canvas.width - r * 2);
     let y = Math.random() * (canvas.height - r * 2);
-    let c = "rgb(15, 16, 32)";
+    let c = "rgb(255, 255, 255)";
     let cl = "rgb(0, 153, 255)";
     let s = Math.random() * 0.5;
     let v = {
@@ -88,12 +88,12 @@ const animationLoop = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   particles.forEach((particle) => {
-    particle.update();
     linkParticles(mouse, particle, 100);
 
     particles.forEach((particle2) => {
       linkParticles(particle, particle2, 100);
     });
+    particle.update();
   });
 
   requestAnimationFrame(animationLoop);

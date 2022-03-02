@@ -15,7 +15,7 @@ body {
 
     font-family: Lexend, Arial, Helvetica, sans-serif;
 
-    background-color: #ffffff;
+    background-color: #0f1020;
 }
 
 #canvas {
@@ -35,7 +35,7 @@ body {
 
     color: rgb(15, 16, 32);
 
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(circle, rgba(15, 16, 32, 1) 0%, rgba(255, 255, 255, 0) 100%);
 
     border-radius: 50%;
 
