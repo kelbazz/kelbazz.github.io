@@ -388,7 +388,7 @@ let kos = {
       // loading all scripts in data.json
 
       if (!flags.includes("no_subscript")) {
-        fetch("/data.json").then((r) => {
+        fetch("/data/data.json").then((r) => {
           r.json().then((json) => {
             json.forEach((data) => {
               switch (data.type) {

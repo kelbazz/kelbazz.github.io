@@ -9,40 +9,7 @@
   </head>
   <body>
     <h1>Choose an app to open...</h1>
-    <div id="app-container">
-      <div class="tile">
-        <div class="image"></div>
-        <span class="name">Border</span>
-      </div>
-      <div class="tile">
-        <div class="image"></div>
-        <span class="name">Border</span>
-      </div>
-      <div class="tile">
-        <div class="image"></div>
-        <span class="name">Border</span>
-      </div>
-      <div class="tile">
-        <div class="image"></div>
-        <span class="name">Border</span>
-      </div>
-      <div class="tile">
-        <div class="image"></div>
-        <span class="name">Border</span>
-      </div>
-      <div class="tile">
-        <div class="image"></div>
-        <span class="name">Border</span>
-      </div>
-      <div class="tile">
-        <div class="image"></div>
-        <span class="name">Border</span>
-      </div>
-      <div class="tile">
-        <div class="image"></div>
-        <span class="name">Border</span>
-      </div>
-    </div>
+    <div id="app-container"></div>
     <style>
       #app-container {
         display: flex;
@@ -86,5 +53,25 @@
         color: white;
       }
     </style>
+    <script defer>
+      fetch("/data/apps.json")
+        .then((r) => {
+          return r.json();
+        })
+        .then((apps) => {
+          apps.forEach((app) => {
+            const tile = document.createElement("div");
+
+            tile.classList.add("tile");
+            tile.innerHTML = `
+              <div class="image" style="background-image: url('${app.icon}');"></div>
+              <span class="name">${app.name}</span>
+            `;
+            tile.addEventListener("click", () => {});
+
+            document.querySelector("#app-container").appendChild(tile);
+          });
+        });
+    </script>
   </body>
 </html>
