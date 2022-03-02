@@ -10,6 +10,12 @@ let kos = {
       : [];
     console.log("Flags: ", flags);
 
+    osDiv.innerHTML = `
+              <div class='loader'>
+              </div>
+              <div class='desktop'>Desktop</div>
+              `;
+
     window.addEventListener("load", () => {
       let osDiv = document.querySelector(".os-container");
 
@@ -18,12 +24,6 @@ let kos = {
       kos.sys.import.css("./src/css/os.css");
 
       /*/ Render Graphic User Interface /*/
-
-      osDiv.innerHTML = `
-              <div class='loader'>
-              </div>
-              <div class='desktop'>Desktop</div>
-              `;
 
       osDiv.querySelector(".desktop").innerHTML = `
               
