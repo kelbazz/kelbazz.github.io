@@ -293,11 +293,14 @@ window.kos = {
             posX: innerWidth / 2 - 480 / 2,
             posY: innerHeight - 250,
 
-            content: `
+            content:
+              `
           <div id="kelbaz-root">
             <h1>Welcome to my website !</h1>
             <div class="kelbaz-button-container">
-              `/* <button class="kelbaz-btn-1">Apps</button> */ `
+              ` +
+              /* <button class="kelbaz-btn-1">Apps</button> */
+              +`
               <button class="kelbaz-btn-2">About</button>
               <button class="kelbaz-btn-3">Terminal</button>
             </div>
