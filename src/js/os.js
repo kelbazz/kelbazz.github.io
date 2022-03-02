@@ -1,6 +1,6 @@
 (() => {})();
 
-let kos = {
+window.kos = {
   /**
    * Init the system.
    */
