@@ -317,7 +317,7 @@ let kos = {
 
           body.querySelector(".kelbaz-btn-1").onclick = () => {
             new kos.StandardWindow({
-              title: "Github",
+              title: "Apps",
               icon: "./src/img/github_logo.png",
 
               height: 450,
@@ -329,7 +329,7 @@ let kos = {
               headerColor: "#0d1117",
 
               content: `
-            <iframe style="height:100%; width:100%; border: none;" src="https://github.com/onofficiel">
+            <iframe style="height:100%; width:100%; border: none;" src="apps/launcher">
               <b>IFrame is unavailable here</b>
             </iframe>
             `,
