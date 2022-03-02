@@ -67,7 +67,9 @@
               <div class="image" style="background-image: url('${app.icon}');"></div>
               <span class="name">${app.name}</span>
             `;
-            tile.addEventListener("click", () => {});
+            tile.addEventListener("click", () => {
+              location.href = app.url;
+            });
 
             document.querySelector("#app-container").appendChild(tile);
           });
