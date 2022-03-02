@@ -9,7 +9,25 @@
   </head>
   <body>
     <h1>Choose an app to open...</h1>
-    <div id="app-container"></div>
-    <style></style>
+    <div id="app-container">
+      <div class="tile">
+        <div class="image"></div>
+        <span class="name"></span>
+      </div>
+    </div>
+    <style>
+      #app-container {
+        display: flex;
+        flex-basis: min-content;
+      }
+
+      .tile {
+        max-width: 80px;
+        min-height: 80px;
+
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </body>
 </html>
