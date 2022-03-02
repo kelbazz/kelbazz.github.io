@@ -793,6 +793,8 @@ let kos = {
             currentResizer = e.target;
             let isResizing = true;
 
+            wnd.querySelector(".window-content").style.pointerEvents = "none";
+
             let prevX = e.clientX;
             let prevY = e.clientY;
 
@@ -827,6 +829,7 @@ let kos = {
             }
 
             function mouseup() {
+              wnd.querySelector(".window-content").style.pointerEvents = "auto";
               window.removeEventListener("mousemove", mousemove);
               window.removeEventListener("mouseup", mouseup);
               isResizing = false;
