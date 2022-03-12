@@ -10,13 +10,30 @@ class Logo {
     this.y = canvas.height / 2;
   }
 
+  update() {}
+
   draw() {
     this.img.onload = () => {
-      ctx.drawImage(this.img, 0, 0);
+      ctx.drawImage(this.img, this.x, this.y);
     };
   }
 }
 
-let logo = new Logo();
+const entities = [new Logo()];
 
-logo.draw();
+function animate() {
+  requestAnimationFrame(animate);
+  ctx.save();
+  ctx.fillStyle = "#0f102077";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.restore();
+
+  entities.forEach((entity) => {
+    entity.update();
+  });
+
+  entities.forEach((entity) => {
+    entity.draw();
+  });
+}
+animate();
