@@ -1,6 +1,9 @@
 const canvas = document.querySelector("#hero");
 const ctx = canvas.getContext("2d");
 
+canvas.height = innerHeight;
+canvas.width = innerWidth;
+
 class Logo {
   constructor() {
     this.img = new Image();
