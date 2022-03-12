@@ -11,13 +11,12 @@ class Logo {
 
     this.x = canvas.width / 2;
     this.y = canvas.height / 2;
-    this.size = { x: 10.5, y: 10 };
+    this.size = { x: 50.5, y: 50 };
     this.vel = { x: 1, y: 1 };
   }
 
   update() {
-    if (!true) {
-    }
+    if (!true) {}
   }
 
   draw() {
