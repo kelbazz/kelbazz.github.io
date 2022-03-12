@@ -16,7 +16,15 @@ class Logo {
   }
 
   update() {
-    if (!true) {}
+    if (this.y <= 0 || this.y + this.size.y >= canvas.height) {
+      this.vel.y = -this.vel.y;
+    }
+    if (this.x <= 0 || this.x + this.size.x >= canvas.width) {
+      this.vel.x = -this.vel.x;
+    }
+
+    this.x += this.vel.x;
+    this.y += this.vel.y;
   }
 
   draw() {
