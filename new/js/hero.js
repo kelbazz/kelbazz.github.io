@@ -16,9 +16,13 @@ class Logo {
   update() {}
 
   draw() {
-    this.img.onload = () => {
-      ctx.drawImage(this.img, this.x, this.y);
-    };
+    this.img.addEventListener(
+      "load",
+      () => {
+        ctx.drawImage(this.img, this.x, this.y);
+      },
+      { once: true }
+    );
   }
 }
 
