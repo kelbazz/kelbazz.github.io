@@ -20,8 +20,7 @@ class Logo {
       "load",
       () => {
         ctx.drawImage(this.img, this.x, this.y);
-      },
-      { once: true }
+      }
     );
   }
 }
