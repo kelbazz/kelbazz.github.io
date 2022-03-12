@@ -70,6 +70,10 @@
             tile.addEventListener("click", () => {
               const wnd = (new parent.window.kos.StandardWindow({
                 title: app.name,
+                icon: app?.icon,
+                headerColor: app?.headerColor,
+                width: app?.width,
+                height: app?.height,
                 content: `<iframe style="border:none;width:100%;height:100%;" src="${app.url}">Can't show the app !</iframe>`,
               })
                 .show()
