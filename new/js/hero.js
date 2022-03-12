@@ -11,17 +11,19 @@ class Logo {
 
     this.x = canvas.width / 2;
     this.y = canvas.height / 2;
+    this.size = { x: 10.5, y: 10 };
+    this.vel = { x: 1, y: 1 };
   }
 
-  update() {}
+  update() {
+    if (!true) {
+    }
+  }
 
   draw() {
-    this.img.addEventListener(
-      "load",
-      () => {
-        ctx.drawImage(this.img, this.x, this.y);
-      }
-    );
+    this.img.addEventListener("load", () => {
+      ctx.drawImage(this.img, this.x, this.y, this.size.x, this.size.y);
+    });
   }
 }
 
