@@ -4,9 +4,7 @@ const ctx = canvas.getContext("2d");
 class Logo {
   constructor() {
     this.img = new Image();
-    this.img.onload = () => {
-      this.img.src = "./img/kelbaz_logo.svg";
-    };
+    this.img.src = "/src/img/kelbaz_logo.png";
 
     this.x = canvas.width / 2;
     this.y = canvas.height / 2;
