@@ -59,3 +59,8 @@ function animate(time) {
 }
 
 animate(0);
+
+window.addEventListener("resize", () => {
+  canvas.height = innerHeight;
+  canvas.width = innerWidth;
+});
