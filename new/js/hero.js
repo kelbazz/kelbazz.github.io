@@ -30,6 +30,7 @@ class Logo {
   draw() {
     this.img.addEventListener("load", () => {
       // ctx.drawImage(this.img, this.x, this.y, this.size.x, this.size.y);
+      ctx.fillStyle = "red";
       ctx.fillRect(this.x, this.y, this.size.x, this.size.y);
     });
   }
