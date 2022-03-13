@@ -30,7 +30,6 @@ class Logo {
   draw() {
     this.img.addEventListener("load", () => {
       // ctx.drawImage(this.img, this.x, this.y, this.size.x, this.size.y);
-      ctx.fillStyle = "red";
       ctx.fillRect(this.x, this.y, this.size.x, this.size.y);
     });
   }
@@ -41,7 +40,7 @@ const entities = [new Logo()];
 function animate() {
   requestAnimationFrame(animate);
   // ctx.fillStyle = "#0f102055";
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
   // ctx.fillStyle = "#ffffffff";
 
   entities.forEach((entity) => {
