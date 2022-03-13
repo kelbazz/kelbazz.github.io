@@ -39,7 +39,7 @@ function animate() {
   requestAnimationFrame(animate);
   ctx.save();
   ctx.fillStyle = "#0f102055";
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.restore();
 
   entities.forEach((entity) => {
