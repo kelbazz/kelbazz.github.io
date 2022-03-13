@@ -24,8 +24,8 @@ class Logo {
         this.vel.x = -this.vel.x;
       }
 
-      this.x += this.vel.x * time / 100;
-      this.y += this.vel.y * time / 100;
+      this.x += this.vel.x * time / 1000;
+      this.y += this.vel.y * time / 1000;
     }
   }
 
