@@ -16,7 +16,7 @@ class Logo {
   }
 
   update(time) {
-    if ((time >= 300)) {
+    if (time >= 300) {
       if (this.y <= 0 || this.y + this.size.y >= canvas.height) {
         this.vel.y = -this.vel.y;
       }
@@ -36,13 +36,14 @@ class Logo {
 
 const entities = [new Logo()];
 
-ctx.save();
-ctx.fillStyle = "#0f1020ff";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.restore();
-
 function animate(time) {
+  ctx.save();
+  ctx.fillStyle = "#0f102022";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.restore();
+
   console.log(time);
+
   entities.forEach((entity) => {
     entity.update(time);
   });
