@@ -40,7 +40,7 @@ const entities = [new Logo()];
 function animate() {
   requestAnimationFrame(animate);
   // ctx.fillStyle = "#0f102055";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   // ctx.fillStyle = "#ffffffff";
 
   entities.forEach((entity) => {
