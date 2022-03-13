@@ -42,6 +42,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.restore();
 
 function animate(time) {
+  console.log(time);
   entities.forEach((entity) => {
     entity.update(time);
   });
