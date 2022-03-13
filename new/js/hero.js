@@ -35,10 +35,8 @@ class Logo {
 
 const entities = [new Logo()];
 
-ctx.save();
 ctx.fillStyle = "#0f102011";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.restore();
 
 function animate() {
   requestAnimationFrame(animate);
