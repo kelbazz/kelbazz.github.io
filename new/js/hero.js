@@ -54,4 +54,4 @@ function animate() {
 
 setTimeout(() => {
   animate();
-});
+}, 3000);
