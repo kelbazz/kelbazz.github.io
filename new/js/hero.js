@@ -40,6 +40,8 @@ class Logo {
 const entities = [new Logo()];
 
 function animate(time) {
+  ctx.rotate(time);
+
   ctx.save();
   ctx.fillStyle = "#0f102022";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
