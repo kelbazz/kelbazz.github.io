@@ -11,7 +11,7 @@ class Logo {
 
     this.x = canvas.width / 2;
     this.y = canvas.height / 2;
-    this.size = { x: 100.5, y: 100 };
+    this.size = { x: 150, y: 100 };
     this.vel = { x: 1, y: 1 };
   }
 
@@ -28,8 +28,8 @@ class Logo {
   }
 
   draw() {
-    // ctx.drawImage(this.img, this.x, this.y, this.size.x, this.size.y);
-    ctx.fillRect(this.x, this.y, this.size.x, this.size.y);
+    ctx.drawImage(this.img, this.x, this.y, this.size.x, this.size.y);
+    // ctx.fillRect(this.x, this.y, this.size.x, this.size.y);
   }
 }
 
