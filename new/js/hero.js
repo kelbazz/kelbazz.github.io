@@ -12,7 +12,7 @@ class Logo {
     this.size = { x: 150, y: 100 };
     this.x = canvas.width / 2 - this.size.x / 2;
     this.y = canvas.height / 2 - this.size.y / 2;
-    this.vel = { x: 1, y: 1 };
+    this.vel = { x: 0.5, y: 0.5 };
   }
 
   update(time) {
