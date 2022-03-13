@@ -15,21 +15,22 @@ class Logo {
     this.vel = { x: 1, y: 1 };
   }
 
-  update() {
-    if (this.y <= 0 || this.y + this.size.y >= canvas.height) {
-      this.vel.y = -this.vel.y;
-    }
-    if (this.x <= 0 || this.x + this.size.x >= canvas.width) {
-      this.vel.x = -this.vel.x;
-    }
+  update(time) {
+    if ((time = 3000)) {
+      if (this.y <= 0 || this.y + this.size.y >= canvas.height) {
+        this.vel.y = -this.vel.y;
+      }
+      if (this.x <= 0 || this.x + this.size.x >= canvas.width) {
+        this.vel.x = -this.vel.x;
+      }
 
-    this.x += this.vel.x;
-    this.y += this.vel.y;
+      this.x += this.vel.x;
+      this.y += this.vel.y;
+    }
   }
 
   draw() {
     ctx.drawImage(this.img, this.x, this.y, this.size.x, this.size.y);
-    // ctx.fillRect(this.x, this.y, this.size.x, this.size.y);
   }
 }
 
@@ -40,18 +41,20 @@ ctx.fillStyle = "#0f1020ff";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ctx.restore();
 
-function animate() {
-  requestAnimationFrame(animate);
+function animate(time) {
 
   entities.forEach((entity) => {
-    entity.update();
+    entity.update(time);
   });
 
   entities.forEach((entity) => {
     entity.draw();
   });
+
+  setTimeout(() => {
+    time++
+    animate(time + 1)
+  }, 1)
 }
 
-setTimeout(() => {
-  animate();
-}, 3000);
+animate(0);
