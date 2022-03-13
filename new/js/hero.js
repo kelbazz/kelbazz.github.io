@@ -19,13 +19,15 @@ class Logo {
     if (time >= 500) {
       if (this.y <= 0 || this.y + this.size.y >= canvas.height) {
         this.vel.y = -this.vel.y;
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
       }
       if (this.x <= 0 || this.x + this.size.x >= canvas.width) {
         this.vel.x = -this.vel.x;
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
       }
 
-      this.x += this.vel.x * time / 1000;
-      this.y += this.vel.y * time / 1000;
+      this.x += (this.vel.x * time) / 1000;
+      this.y += (this.vel.y * time) / 1000;
     }
   }
 
@@ -35,6 +37,7 @@ class Logo {
 }
 
 const entities = [new Logo()];
+const colors = ["#0f1020", "#0201f0"];
 
 function animate(time) {
   ctx.save();
