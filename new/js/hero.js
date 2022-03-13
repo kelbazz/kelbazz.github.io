@@ -16,7 +16,7 @@ class Logo {
   }
 
   update(time) {
-    if ((time = 3000)) {
+    if ((time >= 3000)) {
       if (this.y <= 0 || this.y + this.size.y >= canvas.height) {
         this.vel.y = -this.vel.y;
       }
