@@ -9,9 +9,9 @@ class Logo {
     this.img = new Image();
     this.img.src = "/src/img/kelbaz_logo.png";
 
-    this.x = canvas.width / 2;
-    this.y = canvas.height / 2;
     this.size = { x: 150, y: 100 };
+    this.x = canvas.width / 2 - this.size.x / 2;
+    this.y = canvas.height / 2 - this.size.y / 2;
     this.vel = { x: 1, y: 1 };
   }
 
