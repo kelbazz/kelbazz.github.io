@@ -51,4 +51,7 @@ function animate() {
     entity.draw();
   });
 }
-animate();
+
+setTimeout(() => {
+  animate();
+});
