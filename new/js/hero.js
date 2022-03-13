@@ -38,7 +38,7 @@ const entities = [new Logo()];
 function animate() {
   requestAnimationFrame(animate);
   ctx.save();
-  ctx.fillStyle = "#0f102011";
+  ctx.fillStyle = "#0f1020CC";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.restore();
 
