@@ -18,8 +18,8 @@ class Logo {
   update(time) {
     if (time >= 500) {
       if (this.size.x > 0 || this.size.y > 0) {
-        this.size.x--;
-        this.size.y--;
+        this.size.x -= 0.1;
+        this.size.y -= 0.1;
       }
       if (this.y <= 0 || this.y + this.size.y >= canvas.height) {
         this.vel.y = -this.vel.y;
