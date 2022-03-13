@@ -38,7 +38,7 @@ class Logo {
 const entities = [new Logo()];
 
 function animate(time) {
-  ctx.rotate(time / 100);
+  ctx.rotate(time / 100000);
 
   ctx.save();
   ctx.fillStyle = "#0f102022";
