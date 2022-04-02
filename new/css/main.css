@@ -44,3 +44,8 @@ section {
 #hero-title>h1 {
   font-size: 75px;
 }
+
+*::selection {
+  background: #0099ff;
+  border-radius: 5px;
+}
