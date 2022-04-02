@@ -11,6 +11,8 @@ nav#navbar {
   justify-content: space-between;
   align-items: center;
 
+  z-index: 999;
+
   background: rgb(15, 16, 32);
   background: linear-gradient(180deg, rgba(15, 16, 32, 1) 0%, rgba(185, 96, 96, 0) 100%);
 }
