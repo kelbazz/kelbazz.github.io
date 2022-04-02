@@ -85,7 +85,8 @@ const getDistanceOf = (x1, y1, x2, y2) => {
 };
 
 const animationLoop = () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#0f1020";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   particles.forEach((particle) => {
     linkParticles(mouse, particle, 100);
