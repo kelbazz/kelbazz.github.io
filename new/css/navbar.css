@@ -26,14 +26,19 @@ nav#navbar>ul>li {
   list-style: none;
   display: inline-block;
   margin: 0 10px;
+
 }
 
 nav#navbar>ul>li>a {
   color: inherit;
   border-bottom: solid 0 #fff;
-  transition: all .5s ease;
+  border-left: solid 0 #fff;
+  transition: all .2s ease;
   text-decoration: none;
+  padding: 5px;
 }
+
 nav#navbar>ul>li>a:hover {
   border-bottom: solid 3px #fff;
+  border-left: solid 3px #fff;
 }
