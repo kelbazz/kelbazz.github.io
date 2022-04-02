@@ -32,7 +32,9 @@ section {
   justify-content: flex-start;
   padding: 30px;
 }
-
+#hero-title {
+  margin-left: 10px;
+}
 #hero-title>h1 {
   font-size: 75px;
 }
