@@ -8,3 +8,7 @@ section {
   width: 100vw;
   height: 100vh;
 }
+
+#main {
+  background-color: #0f1020;
+}
