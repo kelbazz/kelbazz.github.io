@@ -6,6 +6,8 @@ nav#navbar {
   width: 100vw;
   min-height: 50px;
 
+  padding: 30px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
