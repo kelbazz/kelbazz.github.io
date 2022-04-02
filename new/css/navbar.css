@@ -21,3 +21,14 @@ nav#navbar {
 
   mix-blend-mode: difference;
 }
+
+nav#navbar>ul>li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav#navbar>ul>li>a {
+  color: inherit;
+  text-decoration: none;
+}
