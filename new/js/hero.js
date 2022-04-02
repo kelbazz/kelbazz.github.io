@@ -1,67 +1,150 @@
-const canvas = document.querySelector("#hero");
-const ctx = canvas.getContext("2d");
+let canvas = document.querySelector("#hero");
+let ctx = canvas.getContext("2d");
 
-canvas.height = innerHeight;
-canvas.width = innerWidth;
+let particles = [];
 
-class Logo {
-  constructor() {
-    this.img = new Image();
-    this.img.src = "/src/img/kelbaz_logo.png";
+let mouse = {
+  x: undefined,
+  y: undefined,
+};
 
-    this.size = { x: 150, y: 100 };
-    this.x = canvas.width / 2 - this.size.x / 2;
-    this.y = canvas.height / 2 - this.size.y / 2;
-    this.vel = { x: 0.5, y: 0.5 };
+const init = () => {
+  resetResize();
+  initialiseElements();
+  setMousePos();
+  animationLoop();
+};
+
+const resetResize = () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+};
+
+let rgb;
+const initialiseElements = () => {
+  for (let i = 0; i < 150; i++) {
+    let r = Math.random() * 2 + 1;
+    let x = Math.random() * (canvas.width - r * 2);
+    let y = Math.random() * (canvas.height - r * 2);
+    let c = "rgb(255, 255, 255)";
+    let cl = "rgb(0, 153, 255)";
+    let s = Math.random() * 0.5;
+    let v = {
+      x: Math.random() - 0.5,
+      y: Math.random() - 0.5,
+    };
+    particles.push(new Particle(x, y, r, c, cl, s, v));
+
+    rgb = cl.match(/\d+/g);
   }
+};
 
-  update(time) {
-    if (time >= 500) {
-      if (this.y <= 0 || this.y + this.size.y >= canvas.height) {
-        this.vel.y = -this.vel.y;
-        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
-      }
-      if (this.x <= 0 || this.x + this.size.x >= canvas.width) {
-        this.vel.x = -this.vel.x;
-        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
-      }
+const setMousePos = () => {
+  window.addEventListener("mousemove", (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+};
 
-      this.x += (this.vel.x * time) / 1000;
-      this.y += (this.vel.y * time) / 1000;
-    }
+class Particle {
+  constructor(x, y, r, c, cl, s, v) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.c = c;
+    this.cl = cl;
+    this.s = s;
+    this.v = v;
   }
 
   draw() {
-    ctx.drawImage(this.img, this.x, this.y, this.size.x, this.size.y);
+    ctx.beginPath();
+    ctx.fillStyle = this.c;
+    ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.closePath();
+  }
+
+  update() {
+    if (this.x - this.r <= 0 || this.x + this.r >= canvas.width) {
+      this.v.x = -this.v.x;
+    }
+    if (this.y - this.r <= 0 || this.y + this.r >= canvas.height) {
+      this.v.y = -this.v.y;
+    }
+
+    this.x += this.v.x * this.s;
+    this.y += this.v.y * this.s;
+
+    this.draw();
   }
 }
 
-const entities = [new Logo()];
-const colors = ["#0f1020", "#9900FF", "#FF0033", "#FFFF00", "#00FF33"];
+const getDistanceOf = (x1, y1, x2, y2) => {
+  return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+};
 
-ctx.fillStyle = "#0f1020";
-function animate(time) {
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+const animationLoop = () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  console.log(time);
+  particles.forEach((particle) => {
+    linkParticles(mouse, particle, 100);
 
-  entities.forEach((entity) => {
-    entity.update(time);
+    particles.forEach((particle2) => {
+      linkParticles(particle, particle2, 100);
+    });
+    particle.update();
   });
 
-  entities.forEach((entity) => {
-    entity.draw();
-  });
+  requestAnimationFrame(animationLoop);
+};
 
-  setTimeout(() => {
-    time++;
-    animate(time + 1);
-  }, 1);
-}
+const linkParticles = (particle1, particle2, radius) => {
+  let distance = getDistanceOf(
+    particle1.x,
+    particle1.y,
+    particle2.x,
+    particle2.y
+  );
+  let opacity = 1 - distance / radius;
 
-animate(0);
+  if (opacity > 0) {
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
+    ctx.moveTo(particle1.x, particle1.y);
+    ctx.lineTo(particle2.x, particle2.y);
+    ctx.closePath();
+    ctx.stroke();
+  }
+};
 
-window.addEventListener("resize", () => {
-  canvas.height = innerHeight;
-  canvas.width = innerWidth;
-});
+window.addEventListener("DOMContentLoaded", init);
+window.addEventListener("resize", resetResize);
+
+window.kexp = {
+  particles: {
+    add: (n) => {
+      for (let i = 0; i < n; i++) {
+        let r = Math.random() * 2 + 1;
+        let x = Math.random() * (canvas.width - r * 2);
+        let y = Math.random() * (canvas.height - r * 2);
+        let c = "rgb(15, 16, 32)";
+        let cl = "rgb(0, 153, 255)";
+        let s = Math.random() * 0.5;
+        let v = {
+          x: Math.random() - 0.5,
+          y: Math.random() - 0.5,
+        };
+        particles.push(new Particle(x, y, r, c, cl, s, v));
+
+        rgb = cl.match(/\d+/g);
+      }
+    },
+    rem: (n) => {
+      for (let i = 0; i < n; i++) {
+        particles.shift();
+      }
+    },
+  },
+};
