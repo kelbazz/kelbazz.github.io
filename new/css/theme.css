@@ -21,10 +21,6 @@
   background: #0099ff;
 }
 
-section {
-  background-color: #fff;
-}
-
 body {
   color: var(--secondary);
   background-color: #fff;
