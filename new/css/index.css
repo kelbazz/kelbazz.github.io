@@ -84,6 +84,7 @@ section#about > div {
 section#about > img {
   width: 40%;
   min-width: 300px;
+  transform: rotate(-3deg);
 }
 
 @keyframes arrow-float {
