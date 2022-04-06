@@ -126,6 +126,11 @@ section#projects > div {
   justify-content: space-between;
   align-items: center;
 
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+
   background-color: #fff;
   border-radius: 20px;
   border: 5px solid var(--primary);
