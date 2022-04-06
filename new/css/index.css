@@ -108,3 +108,8 @@ section#projects > div {
   transform: translateY(5px);
   box-shadow: var(--secondary) 0 15px 0;
 }
+
+.fun-button:active {
+  transform: translateY(10px);
+  box-shadow: var(--secondary) 0 10px 0;
+}
