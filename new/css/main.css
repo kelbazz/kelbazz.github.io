@@ -14,13 +14,11 @@ body {
   background-color: #ffffff;
 }
 
-section {
+section#main {
   width: 100vw;
   height: 100vh;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), 0 100%);
-}
 
-#main {
   color: #fff;
 }
 
@@ -50,4 +48,22 @@ section {
 
 *::selection {
   background: #0099ff;
+}
+
+section#about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 100vh;
+}
+
+section#about > div {
+  max-width: 40%;
+}
+section#about > img {
+  width: 40%;
+  min-width: 300px;
 }
