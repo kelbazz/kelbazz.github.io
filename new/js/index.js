@@ -3,7 +3,7 @@ if (!localStorage.getItem("jokeMade")) {
 
   let cookie = document.createElement("div");
   cookie.classList.add("cookie-banner");
-  cookie.innerHTML = `
+  cookie.innerHTML = "test" || `
     <div>
       Hey cookies ! La j'ai dis cookies et t'es en panic,<br />
       mais en vrai j'en ai rien a foutre de ces trucs !<br />
