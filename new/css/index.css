@@ -119,15 +119,14 @@ section#projects > div {
 }
 
 .cookie-banner {
-  width: calc(100% - 20px * 2);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   bottom: 10px;
-  left: 0;
-  right: 0;
+  left: 20px;
+  right: 20px;
   background-color: #fff;
   border-radius: 20px;
   border: 5px solid var(--primary);
