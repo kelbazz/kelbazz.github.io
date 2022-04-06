@@ -50,8 +50,8 @@ section#main {
   width: 20px;
   height: 20px;
 
-  border-right: 5px solid var(--third);
-  border-bottom: 5px solid var(--third);
+  border-right: 5px solid #09f;
+  border-bottom: 5px solid #09f;
 
   position: absolute;
   bottom: 40px;
