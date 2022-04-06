@@ -55,6 +55,7 @@ section#main {
 
   border-right: 5px solid #09f;
   border-bottom: 5px solid #09f;
+  background-color: #09f;
 
   position: absolute;
   bottom: 40px;
