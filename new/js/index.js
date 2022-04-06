@@ -12,22 +12,6 @@ if (!localStorage.getItem("jokeMade")) {
     <button class="cookie-btn">Ok ?</button>
   `;
 
-  cookie.style = {
-    width: "calc(100% - 20px * 2)",
-    padding: "20px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    position: "fixed",
-    bottom: "10px",
-    left: "0",
-    right: "0",
-    backgroundColor: "#fff",
-    borderRadius: "20px",
-    border: "5px solid var(--primary)",
-    color: "var(--primary)",
-  };
-
   document.body.appendChild(cookie);
 
   document.querySelector(".cookie-btn").addEventListener("click", () => {
