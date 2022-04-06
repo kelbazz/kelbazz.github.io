@@ -93,16 +93,18 @@ section#projects > div {
 
 .fun-button {
   padding: 50px;
+  margin-bottom: 20px;
 
   background-color: var(--primary);
   color: #fff;
 
   border-radius: 10px;
-
   box-shadow: var(--secondary) 0 20px 0;
 }
 
 .fun-button:hover {
+  margin-bottom: 15px;
+
   transform: translateY(5px);
   box-shadow: var(--secondary) 0 15px 0;
 }
