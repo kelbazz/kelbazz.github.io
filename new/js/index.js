@@ -5,9 +5,12 @@ if (!localStorage.getItem("jokeMade")) {
   cookie.classList.add("cookie-banner");
   cookie.innerHTML = `
     <div>
-      Hey cookies ! La j'ai dis cookies et t'es en panic,<br />
-      mais en vrai j'en ai rien a foutre de ces trucs !<br />
-      Donc ce message sert juste a faire chier ! Merci !
+      <img width="50px" src="./img/cookie.png">
+      <span>
+        Hey cookies ! La j'ai dis cookies et t'es en panic,<br />
+        mais en vrai j'en ai rien a foutre de ces trucs !<br />
+        Donc ce message sert juste a faire chier ! Merci !
+      </span>
     </div>
     <button class="cookie-btn">Ok ?</button>
   `;
