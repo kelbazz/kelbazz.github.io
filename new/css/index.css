@@ -102,6 +102,7 @@ section#projects > div {
 
   background-color: #fff;
   color: var(--primary);
+  text-decoration: none;
 
   border-radius: 10px;
   box-shadow: var(--secondary) 0 20px 0;
