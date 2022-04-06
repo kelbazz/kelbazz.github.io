@@ -1,7 +1,7 @@
 if (!localStorage.getItem("jokeMade")) {
   localStorage.setItem("jokeMade", "yesSir !");
 
-  document.querySelector("body") += `
+  document.body.innerHTML += `
   <div class="cookie-banner">
     <div>
       Hey cookies ! La j'ai dis cookies et t'es en panic,<br />
