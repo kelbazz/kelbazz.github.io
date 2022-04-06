@@ -12,7 +12,7 @@ if (!localStorage.getItem("jokeMade")) {
     <button class="cookie-btn">Ok ?</button>
   `;
 
-  cookie.style += {
+  cookie.style = {
     width: "calc(100% - 20px * 2)",
     padding: "20px",
     display: "flex",
