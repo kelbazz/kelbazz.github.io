@@ -5,7 +5,7 @@ if (!localStorage.getItem("jokeMade")) {
   cookie.classList.add("cookie-banner");
   cookie.innerHTML = `
     <div>
-      <img width="50px" class="no-style" src="./img/cookie.png">
+      <img style="width: 50px; margin-right: 20px;" class="no-style" src="./img/cookie.png">
       <span>
         Hey cookies ! La j'ai dis cookies et t'es en panic,<br />
         mais en vrai j'en ai rien a foutre de ces trucs !<br />
