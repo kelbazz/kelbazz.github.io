@@ -101,3 +101,8 @@ section#projects > div {
 
   box-shadow: var(--secondary) 0 20px 0;
 }
+
+.fun-button:hover {
+  transform: translateY(5px);
+  box-shadow: var(--secondary) 0 15px 0;
+}
