@@ -34,7 +34,6 @@ section#main {
   align-items: center;
   align-content: center;
   justify-content: flex-start;
-  mix-blend-mode: difference;
   padding: 30px;
 }
 
