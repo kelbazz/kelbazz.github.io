@@ -100,16 +100,9 @@ section#projects > div {
   border-radius: 10px;
 
   box-shadow: var(--secondary) 0 20px 0;
-
-  transition: all .2s ease-in-out;
 }
 
 .fun-button:hover {
   transform: translateY(5px);
   box-shadow: var(--secondary) 0 15px 0;
-}
-
-.fun-button:focus {
-  transform: translateY(10px);
-  box-shadow: var(--secondary) 0 10px 0;
 }
