@@ -46,6 +46,21 @@ section#main {
   font-size: 75px;
 }
 
+#scroll-arrow {
+  width: 20px;
+  height: 20px;
+
+  border-right: 5px solid var(--third);
+  border-bottom: 5px solid var(--third);
+
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+
+  transform: rotate(45deg);
+  animation: arrow-float 0.5s ease-in infinite alternate;
+}
+
 *::selection {
   background: #0099ff;
 }
@@ -66,4 +81,10 @@ section#about > div {
 section#about > img {
   width: 40%;
   min-width: 300px;
+}
+
+@keyframes arrow-float {
+  to {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
 }
