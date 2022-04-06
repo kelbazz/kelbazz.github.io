@@ -132,3 +132,7 @@ section#projects > div {
   border: 5px solid var(--primary);
   color: var(--primary);
 }
+.cookie-banner > div {
+  display: flex;
+  align-items: center;
+}
