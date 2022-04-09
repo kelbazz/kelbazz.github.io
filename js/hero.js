@@ -41,8 +41,8 @@ const initialiseElements = () => {
 
 const setMousePos = () => {
   window.addEventListener("mousemove", (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
+    mouse.x = e.offsetX;
+    mouse.y = e.offsetY;
   });
 };
 
