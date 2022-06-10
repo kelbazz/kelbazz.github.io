@@ -4,105 +4,141 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kodbaz</title>
+    <title>Kelbaz</title>
 
-    <!-- Scripts -->
-    <script defer src="./js/hero.js"></script>
-    <script defer src="./js/index.js"></script>
-
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="src/css/main.css" />
   </head>
-  <body>
-    <nav id="navbar">
-      <a href="#main"
-        ><img class="no-style" src="./img/logo_navbar.svg" alt="Navbar Icon"
-      /></a>
-      <ul>
-        <li><a href="#about">À Propos</a></li>
-        <li><a href="#projects">Projets</a></li>
-      </ul>
-    </nav>
-    <section id="main">
-      <canvas id="hero"></canvas>
-      <div id="hero-title-container">
-        <img class="no-style" src="./img/kelbaz_logo.svg" alt="Kelbaz's logo" />
-        <div id="hero-title">
-          <h1>Salut, C'est Kelbaz !</h1>
-          <h2>Web Dev, Designeur et Humain.</h2>
-        </div>
-      </div>
-    </section>
-    <a href="#about" id="scroll-arrow"></a>
 
-    <section id="about">
-      <img src="./img/code.png" alt="code" />
-      <div>
-        <h1>Qui suis je ?</h1>
-        <br />
-        <p>
-          Je suis un developpeur et graphiste français passionné par le code et
+  <body>
+    <script src="src/js/hero.js" defer></script>
+    <script src="src/js/index.js" defer></script>
+
+    <div class="container">
+      <nav>
+        <svg
+          class="logo"
+          viewBox="0 0 82 66"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16.4 16.5V0H82L49.2 33L16.4 66V49.5C25.4573 49.5 32.8 42.1131 32.8 33C32.8 23.8869 25.4573 16.5 16.4 16.5ZM16.4 16.5C7.34266 16.5 0 23.8869 0 33C0 42.1131 7.34266 49.5 16.4 49.5V16.5ZM49.2 33L82 66H49.2V33Z"
+            fill="#0F1020"
+          />
+        </svg>
+
+        <ul class="links">
+          <a href="#projects">
+            <li>Projets</li>
+          </a>
+          <a href="#about">
+            <li>À Propos</li>
+          </a>
+
+          <svg
+            class="switch-theme"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 40 40"
+            fill="none"
+          >
+            <path
+              d="M0 20C0 31.0457 8.9543 40 20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C20 11.0457 11.0457 20 0 20Z"
+              fill="#0F1020"
+            />
+          </svg>
+        </ul>
+      </nav>
+
+      <div class="tile main-tile">
+        <img src="src/img/logo.png" alt="Kelbaz's logo" />
+        <div>
+          <div class="title">Moi c’est Kelbaz !</div>
+          <div class="subtitle">Developpeur full stack et designer.</div>
+        </div>
+        <canvas></canvas>
+      </div>
+
+      <div id="about">
+        <div class="tile img"></div>
+        <div class="tile text">
+          <h1>Qui suis-je ?</h1>
+          Je suis un developpeur et designer français passionné par le code et
           le design. J'ai réalisé quelques projets en Javascript mais j'ai
           tendance a vite lacher l'affaire quand je ne comprends pas pourquoi le
           MÊME CODE QUE J'AI COPIÉ COLLÉ ARRIVE A CRASHER ! Bref a part ça, je
           suis toujours en apprentissage et j'éssaie de m'amméliorer et de
           progresser pour devenir meilleur ! Vous pourrez trouvez quelques
           projets en ligne ci-dessous !
-        </p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h1>Voici quelques uns de mes projets !</h1>
-      <div>
-        <a class="fun-button" href="https://3c-love.netlify.app">3C love !</a>
-        <a class="fun-button" href="https://kodbaz.github.io/you"
-          >100% Perdant !</a
-        >
-        <a class="fun-button" href="https://onofficiel.github.io/border"
-          >Border</a
-        >
-        <a class="fun-button" href="https://kodbaz.github.io/KelbazShow"
-          >Kelbaz Show</a
-        >
-      </div>
-    </section>
-
-    <footer>
-      <div>
-        <ul>
-          <b>Liens</b>
-          <li><a href="#main">Haut</a></li>
-          <li><a href="#about">A Propos</a></li>
-          <li><a href="#projects">Projets</a></li>
-        </ul>
-
-        <ul>
-          <b>Réseaux Sociaux</b>
-          <li>
-            <a href="https://instagr.am/kelbaz_">Instagram</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/kelbaz_">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/kodbaz">Github</a>
-          </li>
-          <li>
-            <a href="mailto:code.kelbaz@gmail.com">Mail</a>
-          </li>
-        </ul>
-
-        <button
-          onclick="navigator.clipboard.writeText('https:\/\/kodbaz.github.io');"
-        >
-          Faire de<br />
-          la propagande
-        </button>
+        </div>
       </div>
 
-      <br />
+      <div id="projects">
+        <div
+          class="tile"
+          style="
+            background-color: #f2604c;
+            text-align: center;
+            font-variation-settings: 'wght' 600;
+            font-size: 30px;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+          "
+        >
+          Mes projets
+        </div>
+        <div class="project-container">
+          <a href="https://onofficiel.github.io/border"><div class="tile stand-out">Border</div></a>
+          <a href="https://kodbaz.github.io/Modules/Editor"><div class="tile stand-out">Editor</div></a>
+          <a href="https://3c-love.netlify.app"><div class="tile stand-out">3C love</div></a>
+          <a href="https://kodbaz.github.io/runner"><div class="tile stand-out">Runner</div></a>
+          <a href="https://onofficiel.github.io/w96"><div class="tile stand-out">W96 Repo</div></a>
+        </div>
 
-      <center>© Kelbaz | 2022</center>
-    </footer>
+        <footer id="footer" class="tile">
+          <div>
+            <ul>
+              <b>Liens</b>
+              <li><a href="#main">Haut</a></li>
+              <li><a href="#about">A Propos</a></li>
+              <li><a href="#projects">Projets</a></li>
+            </ul>
+
+            <ul>
+              <b>Réseaux Sociaux</b>
+              <li>
+                <a href="https://instagr.am/kelbaz_">Instagram</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/kelbaz_">Twitter</a>
+              </li>
+              <li>
+                <a href="https://github.com/kodbaz">Github</a>
+              </li>
+              <li>
+                <a href="mailto:code.kelbaz@gmail.com">Mail</a>
+              </li>
+            </ul>
+
+            <button
+              onclick="
+                navigator.clipboard.writeText('https:\/\/kodbaz.github.io');
+                document.querySelector('#footer button').innerText = 'Lien copié !';
+              "
+            >
+              Faire de<br />
+              la propagande
+            </button>
+          </div>
+
+          <br />
+
+          <center>© Kelbaz | 2022</center>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>

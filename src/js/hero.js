@@ -1,4 +1,4 @@
-let canvas = document.querySelector("#hero");
+let canvas = document.querySelector("canvas");
 let ctx = canvas.getContext("2d");
 
 let particles = [];
@@ -40,10 +40,10 @@ const initialiseElements = () => {
 };
 
 const setMousePos = () => {
-  window.addEventListener("mousemove", (e) => {
-    mouse.x = e.offsetX;
-    mouse.y = e.offsetY;
-  });
+  // canvas.addEventListener("mousemove", (e) => {
+  //   mouse.x = e.offsetX;
+  //   mouse.y = e.offsetY;
+  // });
 };
 
 class Particle {
