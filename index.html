@@ -1,139 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelbaz</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kelbaz</title>
+    <link rel="stylesheet" href="./src/css/index.css" />
+  </head>
 
-  <link rel="stylesheet" href="src/css/main.css" />
-</head>
-
-<body>
-  <script src="src/js/hero.js" defer></script>
-  <script src="src/js/index.js" defer></script>
-
-  <div class="container">
+  <body>
     <nav>
-      <svg class="logo" viewBox="0 0 82 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
+      <a href="#"><svg
+        class="logo"
+        viewBox="0 0 82 66"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
           d="M16.4 16.5V0H82L49.2 33L16.4 66V49.5C25.4573 49.5 32.8 42.1131 32.8 33C32.8 23.8869 25.4573 16.5 16.4 16.5ZM16.4 16.5C7.34266 16.5 0 23.8869 0 33C0 42.1131 7.34266 49.5 16.4 49.5V16.5ZM49.2 33L82 66H49.2V33Z"
-          fill="#0F1020" />
-      </svg>
+          fill="#0F1020"
+        />
+      </svg></a>
 
       <ul class="links">
-        <a href="#projects">
-          <li>Projets</li>
-        </a>
         <a href="#about">
-          <li>À Propos</li>
+          <li>About</li>
         </a>
-
-        <svg class="switch-theme" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 40 40"
-          fill="none">
-          <path
-            d="M0 20C0 31.0457 8.9543 40 20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C20 11.0457 11.0457 20 0 20Z"
-            fill="#0F1020" />
-        </svg>
+        <a href="#projects">
+          <li>Projects</li>
+        </a>
       </ul>
     </nav>
 
-    <div id="main" class="tile">
-      <img src="src/img/logo.png" alt="Kelbaz's logo" />
-      <div>
-        <div class="title">Moi c’est Kelbaz !</div>
-        <div class="subtitle">Developpeur full stack et designer.</div>
-      </div>
-      <canvas></canvas>
-    </div>
-
-    <div id="about">
-      <div class="tile img"></div>
-      <div class="tile text">
-        <h1>Qui suis-je ?</h1>
-        Je suis un developpeur et designer français passionné par le code et
-        le design. J'ai réalisé quelques projets en Javascript mais j'ai
-        tendance a vite lacher l'affaire quand je ne comprends pas pourquoi le
-        MÊME CODE QUE J'AI COPIÉ COLLÉ ARRIVE A CRASHER ! Bref a part ça, je
-        suis toujours en apprentissage et j'éssaie de m'amméliorer et de
-        progresser pour devenir meilleur ! Vous pourrez trouvez quelques
-        projets en ligne ci-dessous ! Ils sont tous open source.
-      </div>
-    </div>
-
-    <div id="projects">
-      <div class="tile" style="
-            background-color: #f2604c;
-            text-align: center;
-            font-variation-settings: 'wght' 600;
-            font-size: 30px;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-          ">
-        Mes projets
-      </div>
-      <div class="project-container">
-        <a href="https://onofficiel.github.io/border">
-          <div class="tile stand-out">Border</div>
-        </a>
-        <a href="https://kodbaz.github.io/modules/Editor">
-          <div class="tile stand-out">Editor</div>
-        </a>
-        <a href="https://3c-love.netlify.app">
-          <div class="tile stand-out">3C love</div>
-        </a>
-        <a href="https://kodbaz.github.io/runner">
-          <div class="tile stand-out">Runner</div>
-        </a>
-        <a href="https://onofficiel.github.io/w96">
-          <div class="tile stand-out">W96 Repo</div>
-        </a>
-        <a href="https://kodbaz.github.io/MineSweeper">
-          <div class="tile stand-out">Démineur</div>
-        </a>
-      </div>
-
-      <footer id="footer" class="tile">
-        <div>
-          <ul>
-            <b>Liens</b>
-            <li><a href="#main">Haut</a></li>
-            <li><a href="#about">A Propos</a></li>
-            <li><a href="#projects">Projets</a></li>
-          </ul>
-
-          <ul>
-            <b>Réseaux Sociaux</b>
-            <li>
-              <a href="https://instagr.am/kelbaz_">Instagram</a>
-            </li>
-            <li>
-              <a href="https://twitter.com/kelbaz_">Twitter</a>
-            </li>
-            <li>
-              <a href="https://github.com/kodbaz">Github</a>
-            </li>
-            <li>
-              <a href="mailto:code.kelbaz@gmail.com">Mail</a>
-            </li>
-          </ul>
-
-          <button onclick="
-                navigator.clipboard.writeText('https:\/\/kodbaz.github.io');
-                document.querySelector('#footer button').innerText = 'Lien copié !';
-              ">
-            Faire de<br />
-            la propagande
-          </button>
+    <section id="hero">
+      <div class="bg">
+        <div class="parody-line">
+          <img class="parody-img" src="./assets/img/parody_1.png" />
+          <img class="parody-img" src="./assets/img/parody_1.png" />
+          <img class="parody-img" src="./assets/img/parody_1.png" />
+          <img class="parody-img" src="./assets/img/parody_1.png" />
+          <img class="parody-img" src="./assets/img/parody_1.png" />
         </div>
+        <div class="parody-line">
+          <img class="parody-img" src="./assets/img/parody_2.png" />
+          <img class="parody-img" src="./assets/img/parody_2.png" />
+          <img class="parody-img" src="./assets/img/parody_2.png" />
+          <img class="parody-img" src="./assets/img/parody_2.png" />
+          <img class="parody-img" src="./assets/img/parody_2.png" />
+        </div>
+        <div class="parody-line">
+          <img class="parody-img" src="./assets/img/parody_3.png" />
+          <img class="parody-img" src="./assets/img/parody_3.png" />
+          <img class="parody-img" src="./assets/img/parody_3.png" />
+          <img class="parody-img" src="./assets/img/parody_3.png" />
+          <img class="parody-img" src="./assets/img/parody_3.png" />
+        </div>
+      </div>
+      <div class="centered">
+        <svg
+          class="loko-title"
+          width="608"
+          height="221"
+          viewBox="0 0 608 221"
+          fill="#0099ff"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M248.625 55.25H221V221H359.125V193.375H248.625V55.25Z" />
+          <path
+            d="M110.5 0V165.75H193.375V138.125H138.125V110.5H165.75V82.875H138.125V27.625H248.625V0H110.5Z"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M469.625 221H497.25V55.25H469.625L469.625 82.875H442L442 27.625H414.375L414.375 165.75C414.375 173.006 415.804 180.19 418.581 186.893C421.357 193.596 425.427 199.687 430.557 204.818C435.688 209.948 441.779 214.018 448.482 216.794C455.185 219.571 462.369 221 469.625 221ZM469.625 110.5L469.625 193.375C465.997 193.375 462.405 192.66 459.053 191.272C455.702 189.884 452.656 187.849 450.091 185.284C447.526 182.719 445.491 179.673 444.103 176.322C442.715 172.97 442 169.378 442 165.75V110.5H469.625Z"
+          />
+          <path
+            d="M469.625 0H607.75V110.5C607.75 117.756 606.321 124.94 603.544 131.643C600.768 138.347 596.698 144.437 591.568 149.568C586.437 154.698 580.346 158.768 573.643 161.544C566.94 164.321 559.756 165.75 552.5 165.75L607.75 165.75V193.375L524.875 193.375V165.75C524.875 150.493 537.243 138.125 552.5 138.125C556.128 138.125 559.72 137.41 563.072 136.022C566.423 134.634 569.469 132.599 572.034 130.034C574.599 127.469 576.634 124.423 578.022 121.072C579.41 117.72 580.125 114.128 580.125 110.5V27.625L469.625 27.625V0Z"
+          />
+          <path
+            d="M0 55.25H27.625V138.125C34.9494 138.125 41.9771 135.211 47.1567 130.032C49.9624 127.226 52.1071 123.881 53.483 120.212C54.643 117.136 55.25 113.845 55.25 110.5V27.625H82.875V110.5C82.875 119.618 80.6359 128.467 76.4678 136.344C73.905 141.146 70.6272 145.625 66.6885 149.563L64.1661 151.938L66.6885 154.312C77.0479 164.671 82.875 178.699 82.875 193.375V221H55.25V193.375C55.25 186.037 52.3364 179.023 47.1567 173.843C44.1892 170.876 40.6147 168.664 36.7164 167.315C33.8163 166.29 30.7544 165.75 27.625 165.75V193.375H0V55.25Z"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M276.25 0H331.5C346.153 0 360.206 5.82097 370.568 16.1823C380.929 26.5437 386.75 40.5968 386.75 55.25C386.75 69.158 381.506 82.5254 372.113 92.7086C372.974 93.4391 373.809 94.2072 374.613 95.0118C382.384 102.783 386.75 113.323 386.75 124.313C386.75 135.302 382.384 145.842 374.613 153.613C366.842 161.384 356.302 165.75 345.312 165.75H276.25V0ZM351.034 74.7838C356.215 69.6032 359.125 62.5766 359.125 55.25C359.125 47.9234 356.215 40.8969 351.034 35.7162C345.853 30.5355 338.827 27.625 331.5 27.625H303.875V82.875H331.5C338.82 82.87 345.858 79.96 351.034 74.7838ZM345.313 138.125H303.875V110.5H345.312C348.976 110.5 352.489 111.955 355.079 114.546C357.67 117.136 359.125 120.649 359.125 124.312C359.125 127.976 357.67 131.489 355.079 134.079C352.489 136.67 348.976 138.125 345.313 138.125Z"
+          />
+        </svg>
 
+        <a href="#main"><div class="scroll-pointer" style="--i: 1"></div></a>
+        <a href="#main"><div class="scroll-pointer" style="--i: 2"></div></a>
+        <a href="#main"><div class="scroll-pointer" style="--i: 3"></div></a>
+      </div>
+    </section>
+
+    <main id="main">
+      <div id="about" class="about-view" style="--zone: ai" src="#" alt="Some image" ></div>
+      <div class="about-text" style="--zone: at">
+        <h1>Hey, I'm Kelbaz!</h1>
         <br />
+        <p>
+          I'm a french developer who love graphism and &lt;/ code&gt;. I'm
+          coding in:
+        </p>
+        <br />
+        <ul style="padding-left: 25px">
+          <li>HTML - 😎</li>
+          <li>CSS - 😘</li>
+          <li>JS / NODE.JS - 🤩</li>
+          <li>PYTHON - 🙂</li>
+          <li>C / RUST - 🙃</li>
+        </ul>
+        <br />
+        <p>
+          I also really love design in general and create my wallpapers! Also,
+          most of my code is open source, so go check out my
+          <a href="https://github.com/kodbaz/">github</a>
+          if you have some time free!
+        </p>
+      </div>
 
-        <div>© Kelbaz | 2022</div>
-      </footer>
-    </div>
-  </div>
-</body>
+      <div class="projects-text" style="--zone: pt">
+        <h1>My projects!</h1>
+        <br />
+        <p>
+          Here you can find some of my projects. They are all poen source!
+        </p>
+        <br />
+        <a href="https://onofficiel.github.io/border"><button>Border</button></a> - A simple yet powerful iframe browser.<br>
+        <a href="https://onofficiel.github.io/w96"><button>Windows 96 Repo</button></a> - The Onofficiel's Windows 96 repository.<br>
+        <a href="https://kodbaz.github.io/MineSweeper"><button>MineSweeper</button></a> - Well... MineSweeper!!!<br>
+        <a href="https://kodbaz.github.io/modules/Editor"><button>Editor</button></a> - A basic web code editor for JavaScript.
+      </div>
+      <div id="projects" class="projects-view" style="--zone: pi" src="#" alt="Some image"></div>
+    </main>
 
+    <footer id="footer">
+    <div>
+      <ul>
+        <b>Links</b>
+        <li><a href="#main">Top</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+
+      <ul>
+        <b>Social networks</b>
+        <li>
+          <a href="https://instagr.am/kelbaz_">Instagram</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/kelbaz_">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/kodbaz">Github</a>
+        </li>
+        <li>
+          <a href="mailto:its.kelbaz@gmail.com">Mail</a>
+        </li>
+      </ul>
+
+      <button onclick="
+        navigator.clipboard.writeText('https:\/\/kodbaz.github.io');
+        document.querySelector('#footer button').innerText = 'Link copied !';
+      ">
+        Do propaganda
+      </button>
+    </footer>
+  </body>
 </html>

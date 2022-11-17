@@ -1,0 +1,54 @@
+@import url(./colors.css);
+
+/* Navbar */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 40px;
+
+  position: fixed;
+  z-index: 999;
+
+  width: 100%;
+
+  filter: drop-shadow(0 0 15px var(--bluey));
+}
+
+nav>.links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav .logo {
+  height: 35px;
+  transition: all .2s ease;
+}
+
+nav .logo *,
+nav>.links>svg * {
+  fill: var(--bluey);
+}
+
+nav>.links>* {
+  transition: all .2s ease;
+
+  color: var(--bluey);
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav .logo:hover,
+nav>.links>*:hover {
+  scale: 1.1;
+  rotate: -5deg;
+}
+
+nav .logo:active,
+nav>.links>*:active {
+  scale: .9;
+}

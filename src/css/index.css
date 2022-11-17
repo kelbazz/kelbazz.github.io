@@ -1,0 +1,203 @@
+@import url("./main.css");
+
+/* Hero */
+#hero {
+  background-color: var(--bluck);
+
+  width: 100vw;
+  height: calc(100vh + 50px);
+  border-radius: 0 0 50px 50px;
+
+  position: relative;
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#hero>* {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+}
+
+#hero>.bg {
+  rotate: -5deg;
+  opacity: .5;
+
+  z-index: 0;
+}
+
+#hero>.centered {
+  pointer-events: all;
+  
+  height: calc(100% - 50px);
+
+  justify-content: center;
+  align-items: center;
+
+  filter: drop-shadow(0 0 70px var(--bluey));
+  color: var(--bluey);
+}
+
+#hero>.centered>.loko-title {
+  width: clamp(100px, 50vw, 440px);
+  fill: var(--bluey);
+  transition: all .2s ease;
+}
+
+#hero>.centered>.loko-title:hover {
+  scale: 1.1;
+}
+
+#hero>.centered>.loko-title:active {
+  scale: .9;
+}
+
+
+.parody-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+}
+
+.parody-img {
+  display: inline-block;
+  height: clamp(40px, 10vw, 80px);
+
+  animation: slide 10s linear infinite;
+}
+
+.parody-line:nth-child(2n)>.parody-img {
+  transform: translateX(-100%);
+  animation-direction: reverse;
+}
+
+.scroll-pointer {
+  width: 30px;
+  height: 30px;
+
+  border-right: 10px solid var(--bluey);
+  border-bottom: 10px solid var(--bluey);
+
+  rotate: 45deg;
+  filter: drop-shadow(0 0 70px var(--bluey));
+
+  position: absolute;
+  bottom: calc(30px * var(--i) + 20px);
+  left: 40px;
+
+  animation: float 2s ease-in-out calc(.3s * var(--i)) infinite alternate;
+  transition: all .2s ease;
+}
+
+.scroll-pointer:hover {
+  scale: 1.1;
+}
+
+.scroll-pointer:active {
+  scale: .9;
+}
+
+/* Main */
+#main {
+  display: grid;
+  grid-template-areas:
+    "ai at at"
+    "pt pt pi";
+
+  padding: 50px 0;
+  gap: 50px;
+}
+
+
+#main>* {
+  padding: 50px;
+
+  grid-area: var(--zone);
+  background-color: var(--bluck);
+
+  border-radius: 0 50px 50px 0;
+
+  color: var(--kream);
+}
+
+#main>*:nth-child(2n) {
+  border-radius: 50px 0 0 50px;
+}
+
+/* Images linking */
+.about-view,
+.projects-view {
+  width: 20vw;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-view {
+  background-image: url("../../assets/img/about_img.png");
+}
+
+.projects-view {
+  background-image: url("../../assets/img/crates_alert.png");
+}
+
+/* Misc */
+.projects-text button {
+  background-color: var(--kream);
+  color: var(--bluck);
+}
+
+/* Keyframes */
+@keyframes slide {
+  to {
+    translate: -100% 0;
+  }
+}
+
+@keyframes float {
+  to {
+    translate: 0 100%;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 320px) {
+  .loko-title {
+    rotate: -90deg;
+    height: 40vw;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 750px) {
+  #main {
+    grid-template-areas:
+      "ai"
+      "at"
+      "pi"
+      "pt";
+  }
+
+  .about-view,
+  .projects-view {
+    width: auto;
+    height: 300px;
+  }
+
+  #main>* {
+    margin-right: 50px;
+  }
+
+  #main>*:nth-child(2n) {
+    margin-right: 0;
+    margin-left: 50px;
+  }
+}
