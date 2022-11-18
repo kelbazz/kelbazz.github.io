@@ -44,8 +44,13 @@ nav>.links>* {
 
 nav .logo:hover,
 nav>.links>*:hover {
+  text-decoration: none;
+
   scale: 1.1;
-  rotate: -5deg;
+  rotate: -1 1 0 20deg;
+
+  filter:
+    drop-shadow(1px 1px #0088ee) drop-shadow(2px 2px #0088ee);
 }
 
 nav .logo:active,

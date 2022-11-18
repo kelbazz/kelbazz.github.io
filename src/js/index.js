@@ -1,21 +1,9 @@
-let darkTheme = false;
+const data = await fetch("../../assets/data/wise.json").then((r) => r.json());
 
-function switchTheme() {
-  const root = document.querySelector(":root");
-  const rootStyle = getComputedStyle(root);
+let template =
+  data.templates[Math.floor(Math.random() * data.templates.length)];
+let adjective =
+  data.adjectives[Math.floor(Math.random() * data.adjectives.length)];
+let noun = data.nouns[Math.floor(Math.random() * data.nouns.length)];
 
-  const dark = rootStyle.getPropertyValue("--dark").trim();
-  const light = rootStyle.getPropertyValue("--light").trim();
-
-  if (darkTheme) {
-    root.style.setProperty("--primary", dark);
-    root.style.setProperty("--secondary", light);
-  } else {
-    root.style.setProperty("--primary", light);
-    root.style.setProperty("--secondary", dark);
-  }
-
-  darkTheme = !darkTheme;
-}
-
-document.querySelector("nav>.links>.switch-theme").addEventListener("click", switchTheme);
+document.querySelector(".bruh-quote").innerHTML = template.replaceAll("{}", `${adjective} ${noun}`);

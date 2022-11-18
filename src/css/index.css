@@ -33,7 +33,7 @@
 
 #hero>.centered {
   pointer-events: all;
-  
+
   height: calc(100% - 50px);
 
   justify-content: center;
@@ -51,6 +51,17 @@
 
 #hero>.centered>.loko-title:hover {
   scale: 1.1;
+  transform: rotateX(-20deg) rotateY(20deg);
+
+
+  filter:
+    drop-shadow(1px 1px #0088ee)
+    /* ----------1px----------- */
+    drop-shadow(2px 2px #0088ee)
+    /* ----------2px----------- */
+    drop-shadow(3px 3px #0088ee)
+    /* ----------3px----------- */
+    drop-shadow(4px 4px #0088ee)
 }
 
 #hero>.centered>.loko-title:active {
@@ -150,9 +161,22 @@
 }
 
 /* Misc */
+
 .projects-text button {
   background-color: var(--kream);
   color: var(--bluck);
+}
+
+blockquote::before {
+  content: "“";
+}
+
+blockquote::after {
+  content: "” - Maybe Someone";
+}
+
+blockquote {
+  font-size: 20px;
 }
 
 /* Keyframes */
