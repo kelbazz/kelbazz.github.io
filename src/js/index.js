@@ -1,8 +1,5 @@
 {
   let firstTime = true;
-  const color = window.matchMedia("(prefers-color-scheme: dark)")
-    ? "#ffffff"
-    : "#0f1020";
 
   window.say = (txt) => {
     console.log(txt);
@@ -17,33 +14,37 @@
 
   console.log(
     [
+      "",
+      "",
       "%c   @@@@@@@@@@@@@@%c  Hey dev! Or aren't you?",
       "%c   @@@@@@@@@@@@' %c  ",
       "%c,@@%c `@@@@@@@@'   %c  Maybe you've found a new secret",
-      "%c@@@%c  :@@@@@'     %c  place full of mystery! This is",
+      "%c@@@%c  :@@@@@'     %c  place full of mistery! This is",
       "%c`@@%c ,@@@@' %c@@,   %c  called a console and you can do",
       "%c   @@@@'   %c@@@@, %c  many thing with it!",
-      '%c   @@\'     %c@@@@@@%c  try typping `%csay("hey!")%c`',
+      '%c   @@\'     %c@@@@@@%c  try typping `%cconsole.log("hey!")%c`',
+      "",
+      "",
     ].join("\n"),
     `color: #0099ff`,
+    `color: inherit;font-weight: bold`,
+    `color: #0099ff;font-weight: inherit`,
+    `color: inherit`,
     `color: inherit`,
     `color: #0099ff`,
     `color: inherit`,
-    `color: ${color}`,
-    `color: #0099ff`,
-    `color: inherit`,
-    `color: ${color}`,
-    `color: #0099ff`,
-    `color: inherit`,
-    `color: ${color}`,
-    `color: #0099ff`,
-    `color: ${color}`,
     `color: inherit`,
     `color: #0099ff`,
-    `color: ${color}`,
+    `color: inherit`,
     `color: inherit`,
     `color: #0099ff`,
-    `color: ${color}`,
+    `color: inherit`,
+    `color: inherit`,
+    `color: #0099ff`,
+    `color: inherit`,
+    `color: inherit`,
+    `color: #0099ff`,
+    `color: inherit`,
     `color: inherit`,
     `color: #0099ff`,
     `color: inherit`
