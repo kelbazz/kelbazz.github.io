@@ -5,15 +5,13 @@
     : "#0f1020";
 
   window.say = (txt) => {
-    console.log(
-      txt +
-        (firstTime
-          ? txt === "hey!" || txt === "hey"
-            ? "\n(Well done! Now try with other words!)"
-            : "\n(Well done! Now try to look at other possible things you can do!)"
-          : "")
-    );
+    console.log(txt);
     firstTime = false;
+    return firstTime
+      ? txt === "hey!" || txt === "hey"
+        ? "\n(Well done! Now try with other words!)"
+        : "\n(Well done! Now try to look at other possible things you can do!)"
+      : "";
   };
 
   console.log(
