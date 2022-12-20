@@ -22,7 +22,7 @@
       "%c@@@%c  :@@@@@'     %c  place full of mistery! This is",
       "%c`@@%c ,@@@@' %c@@,   %c  called a console and you can do",
       "%c   @@@@'   %c@@@@, %c  many thing with it!",
-      '%c   @@\'     %c@@@@@@%c  try typping `%cconsole.log("hey!")%c`',
+      '%c   @@\'     %c@@@@@@%c  try to type `%csay("hey!")%c`',
       "",
       "",
     ].join("\n"),
