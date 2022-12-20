@@ -1,14 +1,48 @@
-console.log(
-  [
-    "   @@@@@@@@@@@@@@",
-    "   @@@@@@@@@@@@' ",
-    ",@@ `@@@@@@@@'   ",
-    "@@@  :@@@@@'     ",
-    "`@@ ,@@@@' @@,   ",
-    "   @@@@'   @@@@, ",
-    "   @@'     @@@@@@",
-  ].join("\n")
-);
+{
+  let hasRan = false;
+  const color = window.matchMedia("(prefers-color-scheme: dark)")
+    ? "#ffffff"
+    : "#0f1020";
+
+  window.say = (txt) => {
+    console.log(txt + hasRan ? "" : "\n(Well done! Now try with other words!)");
+    hasRan = true;
+  };
+
+  console.log(
+    [
+      "%c   @@@@@@@@@@@@@@%c  Hey dev! Or aren't you?",
+      "%c   @@@@@@@@@@@@' %c  ",
+      "%c,@@%c `@@@@@@@@'   %c  Maybe you've found a new secret",
+      "%c@@@%c  :@@@@@'     %c  place full of mistery! This is",
+      "%c`@@%c ,@@@@' %c@@,   %c  called a console and you can do",
+      "%c   @@@@'   %c@@@@, %c  many thing with it!",
+      '%c   @@\'     %c@@@@@@%c  try typping `%cconsole.log("hey!")%c`',
+    ].join("\n"),
+    `color: #0099ff`,
+    `color: inherit`,
+    `color: #0099ff`,
+    `color: inherit`,
+    `color: ${color}`,
+    `color: #0099ff`,
+    `color: inherit`,
+    `color: ${color}`,
+    `color: #0099ff`,
+    `color: inherit`,
+    `color: ${color}`,
+    `color: #0099ff`,
+    `color: ${color}`,
+    `color: inherit`,
+    `color: #0099ff`,
+    `color: ${color}`,
+    `color: inherit`,
+    `color: #0099ff`,
+    `color: ${color}`,
+    `color: inherit`,
+    `color: #0099ff`,
+    `color: inherit`
+  );
+}
 
 const data = await fetch("../../assets/data/wise.json").then((r) => r.json());
 
