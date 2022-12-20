@@ -6,12 +6,13 @@
 
   window.say = (txt) => {
     console.log(txt);
-    firstTime = false;
-    return firstTime
+    let comment = firstTime
       ? txt === "hey!" || txt === "hey"
         ? "\n(Well done! Now try with other words!)"
         : "\n(Well done! Now try to look at other possible things you can do!)"
       : undefined;
+    firstTime = false;
+    return comment;
   };
 
   console.log(
