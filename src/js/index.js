@@ -1,12 +1,19 @@
 {
-  let hasRan = false;
+  let firstTime = true;
   const color = window.matchMedia("(prefers-color-scheme: dark)")
     ? "#ffffff"
     : "#0f1020";
 
   window.say = (txt) => {
-    console.log(txt + hasRan ? "" : "\n(Well done! Now try with other words!)");
-    hasRan = true;
+    console.log(
+      txt +
+        (firstTime
+          ? txt === "hey!" || txt === "hey"
+            ? "\n(Well done! Now try with other words!)"
+            : "\n(Well done! Now try to look at other possible things you can do!)"
+          : "")
+    );
+    firstTime = false;
   };
 
   console.log(
