@@ -20,7 +20,7 @@
       "%c   @@@@@@@@@@@@@@%c  Hey dev! Or aren't you?",
       "%c   @@@@@@@@@@@@' %c  ",
       "%c,@@%c `@@@@@@@@'   %c  Maybe you've found a new secret",
-      "%c@@@%c  :@@@@@'     %c  place full of mistery! This is",
+      "%c@@@%c  :@@@@@'     %c  place full of mystery! This is",
       "%c`@@%c ,@@@@' %c@@,   %c  called a console and you can do",
       "%c   @@@@'   %c@@@@, %c  many thing with it!",
       '%c   @@\'     %c@@@@@@%c  try typping `%csay("hey!")%c`',
