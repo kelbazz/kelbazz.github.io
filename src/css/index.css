@@ -55,13 +55,13 @@
 
 
   filter:
-    drop-shadow(1px 1px #0088ee)
+    drop-shadow(1px 1px var(--dark-bluey))
     /* ----------1px----------- */
-    drop-shadow(2px 2px #0088ee)
+    drop-shadow(2px 2px var(--dark-bluey))
     /* ----------2px----------- */
-    drop-shadow(3px 3px #0088ee)
+    drop-shadow(3px 3px var(--dark-bluey))
     /* ----------3px----------- */
-    drop-shadow(4px 4px #0088ee)
+    drop-shadow(4px 4px var(--dark-bluey))
 }
 
 #hero>.centered>.loko-title:active {
