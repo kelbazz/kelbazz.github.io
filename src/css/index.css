@@ -61,7 +61,7 @@
     /* ----------2px----------- */
     drop-shadow(3px 3px var(--dark-bluey))
     /* ----------3px----------- */
-    drop-shadow(4px 4px var(--dark-bluey))
+    drop-shadow(4px 4px var(--dark-bluey));
 }
 
 #hero>.centered>.loko-title:active {
