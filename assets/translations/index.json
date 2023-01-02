@@ -1,0 +1,46 @@
+{
+  "fr": {
+    "about": "A propos",
+    "projects": "Projets",
+
+    "social networks": "Réseaux sociaux",
+    "links": "Liens",
+    "top": "Haut de la page",
+
+    "about title": "Hey, C'est Kelbaz !",
+    "about intro": "Je suis un developpeur francais qui aime le graphiste et le &lt;/code&gt;. Je code le plus souvent en:",
+    "about desc": "La plupart de mon code est open source, alors allez voir mon <a href=\"https://github.com/kodbaz/\">github</a> si vous avez du temps libre! J'adore aussi beaucoup le design en general et je créé mes propres fonds d'écran! Booon... Maintenant vous savez qui je suis ! Oh ! J'allais oublié ! Allez me suivre sur Github car comme on dit souvent:",
+    "quote author": "Probablement quelqu'un",
+
+    "projects title": "Mes projets !",
+    "projects intro": "Ici trouvez mes plus belles pépites. Elles sont toutes open source !",
+
+    "border desc": "Un navigateur iframe simple mais puissant.",
+    "w96 desc": "Le dépot Windows 96 d'Onofficiel.",
+    "minesweeper desc": "Et bien... MineSweeper !!!",
+    "k_ai desc": "Et ouais ! J'en ai fait une !",
+    "editor desc": "Un simple editeur de code wev pour JavaScript.",
+
+    "propaganda text": "Faire de la propagande",
+    "propaganda copy text": "Lien copié ! (Colle le partout !)"
+  },
+  "en": {
+
+    "about title": "Hey, I'm Kelbaz!",
+    "about intro": "I'm a french developer who love graphism and &lt;/code&gt;. I'm coding in:",
+    "about desc": "Most of my code is open source, so go check out my <a href=\"https://github.com/kodbaz/\">github</a> if you have some free time! I also really love design in general and create my wallpapers! Soo... now you know who I am! Oh! I almost forgot! Go follow me on Github because as someone said:",
+    "quote author": "Maybe Someone",
+
+    "projects title": "My projects!",
+    "projects intro": "Here you can find some of my projects. They are all open source!",
+
+    "border desc": "A simple yet powerful iframe browser.",
+    "w96 desc": "The Onofficiel's Windows 96 repository.",
+    "minesweeper desc": "Well... MineSweeper!!!",
+    "k_ai desc": "Hell yeah! I made my own!",
+    "editor desc": "A basic web code editor for JavaScript.",
+
+    "propaganda text": "Do propaganda",
+    "propaganda copy text": "Link copied! (Hehe! Go Raid!)"
+  }
+}

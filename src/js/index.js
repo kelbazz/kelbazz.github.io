@@ -1,3 +1,5 @@
+import translate from "../js/translate.js";
+
 {
   let firstTime = true;
 

@@ -172,7 +172,7 @@ blockquote::before {
 }
 
 blockquote::after {
-  content: "” - Maybe Someone";
+  content: attr(after-text);
 }
 
 blockquote {
