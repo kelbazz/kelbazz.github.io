@@ -3,7 +3,7 @@ export default function translate(filePath, lang) {
     .then((r) => r.json())
     .then((trads) => {
       console.log(trads, lang);
-      if (!trads[lang]) throw Error("Cannot find data for this language");
+      if (!trads[lang]) throw "Cannot find data for this language";
 
       let page = new String(document.querySelector(":root").innerHTML);
       const matches = [...page.matchAll(/(?<!<\/>){{\s*(.+?)\s*}}/g)];
@@ -18,6 +18,17 @@ export default function translate(filePath, lang) {
       });
 
       document.querySelector(":root").innerHTML = page;
+    })
+    .catch(() => {
+      let page = new String(document.querySelector(":root").innerHTML);
+      const matches = [...page.matchAll(/(?<!<\/>){{\s*(.+?)\s*}}/g)];
+
+      matches.forEach((match) => {
+        page = page.replaceAll(match[0], match[1]);
+      });
+
+      document.querySelector(":root").innerHTML = page;
+      throw "Cannot fetch the translation file for this page";
     });
 }
 

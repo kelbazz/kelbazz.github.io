@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="./src/css/index.css" />
     <script defer src="./src/js/index.js" type="module"></script>
-    <script defer src="./src/js/translate.js" type="module"></script>
+    <script src="./src/js/translate.js" type="module"></script>
   </head>
 
   <body>
@@ -103,39 +103,39 @@
     <main id="main">
       <div id="about" class="about-view" style="--zone: ai" src="#" alt="Some image" ></div>
       <div class="about-text" style="--zone: at">
-        <h1>{{about title}}</h1>
+        <h1>{{ About Title }}</h1>
         <br />
         <p>
-          {{about intro}}
+          {{ About Intro }}
         </p>
         <br />
         <ul style="padding-left: 25px">
-          <li>HTML - 😎</li>
-          <li>CSS - 😘</li>
-          <li>JS / NODE.JS - 🤩</li>
-          <li>PYTHON - 🙂</li>
-          <li>C / RUST - 🙃</li>
+          <li>HTML - 🌐</li>
+          <li>CSS - 🎨</li>
+          <li>JS / NODE.JS - 🟨</li>
+          <li>PYTHON - 🐍</li>
+          <li>RUST - 🦀</li>
         </ul>
         <br />
         <p>
-          {{about desc}}
+          {{ About Desc }}
         </p>
         <br>
-        <blockquote class="bruh-quote" after-text="” - {{quote author}}"></blockquote>
+        <blockquote class="bruh-quote" after-text="” - {{ Quote author }}"></blockquote>
       </div>
 
       <div class="projects-text" style="--zone: pt">
-        <h1>{{projects title}}</h1>
+        <h1>{{ Projects Title }}</h1>
         <br />
         <p>
-          {{projects intro}}
+          {{ Projects Intro }}
         </p>
         <br />
-        <a href="https://onofficiel.github.io/border"><button>Border</button></a> - {{border desc}}<br>
-        <a href="https://onofficiel.github.io/w96"><button>Windows 96 Repo</button></a> - {{w96 desc}}<br>
-        <a href="https://kodbaz.github.io/MineSweeper"><button>MineSweeper</button></a> - {{minesweeper desc}}<br>
-        <a href="https://github.com/Kodbaz/K_AI"><button>Kelbaz's Artificial Intelligence</button></a> - {{k_ai desc}}<br>
-        <a href="https://kodbaz.github.io/modules/Editor"><button>Editor</button></a> - {{editor desc}}
+        <a href="https://onofficiel.github.io/border"><button>Border</button></a> - {{ Border desc}} <br>
+        <a href="https://onofficiel.github.io/w96"><button>Windows 96 Repo</button></a> - {{ w96 desc}} <br>
+        <a href="https://kodbaz.github.io/MineSweeper"><button>MineSweeper</button></a> - {{ MineSweeper desc}} <br>
+        <a href="https://github.com/Kodbaz/K_AI"><button>Kelbaz's Artificial Intelligence</button></a> - {{ K_AI desc }}<br>
+        <a href="https://kodbaz.github.io/modules/Editor"><button>Editor</button></a> - {{ Editor desc }}
       </div>
       <div id="projects" class="projects-view" style="--zone: pi" src="#" alt="Some image"></div>
     </main>
@@ -143,14 +143,14 @@
     <footer id="footer">
     <div>
       <ul>
-        <b>{{Links}}</b>
-        <li><a href="#main">{{Top}}</a></li>
-        <li><a href="#about">{{About}}</a></li>
-        <li><a href="#projects">{{Projects}}</a></li>
+        <b>{{ Links }}</b>
+        <li><a href="#main">{{ Top }}</a></li>
+        <li><a href="#about">{{ About }}</a></li>
+        <li><a href="#projects">{{ Projects }}</a></li>
       </ul>
 
       <ul>
-        <b>{{Social networks}}</b>
+        <b>{{ Social networks }}</b>
         <li>
           <a href="https://instagr.am/kelbaz_">Instagram</a>
         </li>
@@ -169,7 +169,7 @@
         navigator.clipboard.writeText('https:\/\/kodbaz.github.io');
         document.querySelector('#footer button').innerText = '{{ propaganda copy text }}';
       ">
-        {{propaganda text}}
+        {{ Propaganda Text }}
       </button>
     </footer>
   </body>
