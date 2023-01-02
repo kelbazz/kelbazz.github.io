@@ -50,7 +50,7 @@ nav>.links>*:hover {
   rotate: -1 1 0 20deg;
 
   filter:
-    drop-shadow(1px 1px #0088ee) drop-shadow(2px 2px #0088ee);
+    drop-shadow(1px 1px var(--dark-bluey)) drop-shadow(2px 2px var(--dark-bluey));
 }
 
 nav .logo:active,
