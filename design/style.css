@@ -41,7 +41,7 @@ section {
   bottom: calc(30px * var(--i) + 20px);
   left: 40px;
 
-  animation: float 2s ease-in-out calc(.3s * var(--i)) infinite alternate;
+  animation: float 2s var(--wavey-in) calc(.3s * var(--i)) infinite alternate;
   transition: all .2s var(--wavey-out);
 }
 
