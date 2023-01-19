@@ -13,19 +13,20 @@
 
   <body>
     <nav>
-      <a href="#"><svg
-        class="logo"
-        viewBox="0 0 82 66"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M16.4 16.5V0H82L49.2 33L16.4 66V49.5C25.4573 49.5 32.8 42.1131 32.8 33C32.8 23.8869 25.4573 16.5 16.4 16.5ZM16.4 16.5C7.34266 16.5 0 23.8869 0 33C0 42.1131 7.34266 49.5 16.4 49.5V16.5ZM49.2 33L82 66H49.2V33Z"
-          fill="#0F1020"
-        />
-      </svg></a>
+      <a href="#"
+        ><svg
+          class="logo"
+          viewBox="0 0 82 66"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16.4 16.5V0H82L49.2 33L16.4 66V49.5C25.4573 49.5 32.8 42.1131 32.8 33C32.8 23.8869 25.4573 16.5 16.4 16.5ZM16.4 16.5C7.34266 16.5 0 23.8869 0 33C0 42.1131 7.34266 49.5 16.4 49.5V16.5ZM49.2 33L82 66H49.2V33Z"
+            fill="#0F1020"
+          /></svg
+      ></a>
 
       <ul class="links">
         <a href="#about">
@@ -33,6 +34,9 @@
         </a>
         <a href="#projects">
           <li>{{Projects}}</li>
+        </a>
+        <a href="design">
+          <li>Design</li>
         </a>
       </ul>
     </nav>
@@ -101,13 +105,17 @@
     </section>
 
     <main id="main">
-      <div id="about" class="about-view" style="--zone: ai" src="#" alt="Some image" ></div>
+      <div
+        id="about"
+        class="about-view"
+        style="--zone: ai"
+        src="#"
+        alt="Some image"
+      ></div>
       <div class="about-text" style="--zone: at">
         <h1>{{ About Title }}</h1>
         <br />
-        <p>
-          {{ About Intro }}
-        </p>
+        <p>{{ About Intro }}</p>
         <br />
         <ul style="padding-left: 25px">
           <li>HTML - 🌐</li>
@@ -117,58 +125,92 @@
           <li>RUST - 🦀</li>
         </ul>
         <br />
-        <p>
-          {{ About Desc }}
-        </p>
-        <br>
-        <blockquote class="bruh-quote" after-text="” - {{ Quote author }}"></blockquote>
+        <p>{{ About Desc }}</p>
+        <br />
+        <blockquote
+          class="bruh-quote"
+          after-text="” - {{ Quote author }}"
+        ></blockquote>
       </div>
 
       <div class="projects-text" style="--zone: pt">
         <h1>{{ Projects Title }}</h1>
         <br />
-        <p>
-          {{ Projects Intro }}
-        </p>
+        <p>{{ Projects Intro }}</p>
         <br />
-        <a href="https://onofficiel.github.io/border"><button>Border</button></a> - {{ Border desc}} <br>
-        <a href="https://onofficiel.github.io/w96"><button>Windows 96 Repo</button></a> - {{ w96 desc}} <br>
-        <a href="https://kodbaz.github.io/MineSweeper"><button>MineSweeper</button></a> - {{ MineSweeper desc}} <br>
-        <a href="https://github.com/Kodbaz/K_AI"><button>Kelbaz's Artificial Intelligence</button></a> - {{ K_AI desc }}<br>
-        <a href="https://kodbaz.github.io/modules/Editor"><button>Editor</button></a> - {{ Editor desc }}
+        <a href="https://onofficiel.github.io/border"
+          ><button>Border</button></a
+        >
+        - {{ Border desc}} <br />
+        <a href="https://onofficiel.github.io/w96"
+          ><button>Windows 96 Repo</button></a
+        >
+        - {{ w96 desc}} <br />
+        <a href="https://kodbaz.github.io/MineSweeper"
+          ><button>MineSweeper</button></a
+        >
+        - {{ MineSweeper desc}} <br />
+        <a href="https://github.com/Kodbaz/K_AI"
+          ><button>Kelbaz's Artificial Intelligence</button></a
+        >
+        - {{ K_AI desc }}<br />
+        <a href="https://kodbaz.github.io/modules/Editor"
+          ><button>Editor</button></a
+        >
+        - {{ Editor desc }}
       </div>
-      <div id="projects" class="projects-view" style="--zone: pi" src="#" alt="Some image"></div>
+      <div
+        id="projects"
+        class="projects-view"
+        style="--zone: pi"
+        src="#"
+        alt="Some image"
+      ></div>
     </main>
 
     <footer id="footer">
-    <div>
-      <ul>
-        <b>{{ Links }}</b>
-        <li><a href="#main">{{ Top }}</a></li>
-        <li><a href="#about">{{ About }}</a></li>
-        <li><a href="#projects">{{ Projects }}</a></li>
-      </ul>
+      <span
+        style="
+          font-family: 'JetBrains Mono';
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        &copy;&nbsp;<img src="/assets/img/loko_graph.png" width="100" />
+      </span>
+      <div>
+        <ul>
+          <b>{{ Links }}</b>
+          <li><a href="#main">{{ Top }}</a></li>
+          <li><a href="#about">{{ About }}</a></li>
+          <li><a href="#projects">{{ Projects }}</a></li>
+          <li><a href="design">Design</a></li>
+        </ul>
 
-      <ul>
-        <b>{{ Social networks }}</b>
-        <li>
-          <a href="https://instagr.am/kelbaz_">Instagram</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/kelbaz_">Twitter</a>
-        </li>
-        <li>
-          <a href="https://github.com/kodbaz">Github</a>
-        </li>
-        <li>
-          <a href="mailto:its.kelbaz@gmail.com">Mail</a>
-        </li>
-      </ul>
+        <ul>
+          <b>{{ Social networks }}</b>
+          <li>
+            <a href="https://instagr.am/kelbaz_">Instagram</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/kelbaz_">Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/kodbaz">Github</a>
+          </li>
+          <li>
+            <a href="mailto:its.kelbaz@gmail.com">Mail</a>
+          </li>
+        </ul>
+      </div>
 
-      <button onclick="
+      <button
+        onclick="
         navigator.clipboard.writeText('https:\/\/kodbaz.github.io');
         document.querySelector('#footer button').innerText = '{{ propaganda copy text }}';
-      ">
+      "
+      >
         {{ Propaganda Text }}
       </button>
     </footer>

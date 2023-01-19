@@ -5,7 +5,7 @@
 
     "social networks": "Réseaux sociaux",
     "links": "Liens",
-    "top": "Haut de la page",
+    "top": "Haut",
 
     "about title": "Hey, C'est Kelbaz !",
     "about intro": "Je suis un developpeur francais qui aime le graphiste et le &lt;/code&gt;. Je code le plus souvent en:",
@@ -19,7 +19,7 @@
     "w96 desc": "Le dépot Windows 96 d'Onofficiel.",
     "minesweeper desc": "Et bien... MineSweeper !!!",
     "k_ai desc": "Et ouais ! J'en ai fait une !",
-    "editor desc": "Un simple editeur de code wev pour JavaScript.",
+    "editor desc": "Un simple editeur de code web pour JavaScript.",
 
     "propaganda text": "Faire de la propagande",
     "propaganda copy text": "Lien copié ! (Colle le partout !)"

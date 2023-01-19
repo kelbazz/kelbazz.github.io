@@ -1,0 +1,89 @@
+@import url(./consts.css);
+
+@font-face {
+  src: url("/assets/font/Lexend.ttf");
+  font-family: "Lexend";
+}
+
+@font-face {
+  src: url("/assets/font/JetBrains_Mono.ttf");
+  font-family: "JetBrains Mono";
+}
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  color: var(--bluck);
+}
+
+/* ::selection */
+::selection {
+  background-color: var(--bluey);
+  color: var(--bluck);
+}
+
+/* <h*> */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* <a> */
+a {
+  text-decoration: none;
+  color: var(--bluey);
+
+  transition: all .2s var(--wavey-out);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--bluey);
+}
+
+/* <button> */
+:is(button, .button) {
+  border: 0 solid var(--bluck);
+  border-radius: 10px;
+
+  background-color: var(--bluck);
+  color: var(--kream);
+
+  padding: 10px;
+  margin: 5px;
+
+  transition: all .2s var(--wavey-out);
+}
+
+:is(button, .button):is(:hover, :focus) {
+  color: var(--bluey);
+  border: 3px solid var(--bluey);
+
+  padding: 7px;
+}
+
+:is(button, .button):active {
+  scale: .9;
+  border: 6px solid transparent;
+
+  color: var(--kream);
+  background-color: var(--bluey);
+
+  padding: 4px;
+}
+
+/* <* .glow> */
+.glow {
+  filter: drop-shadow(0 0 70px var(--bluey));
+}

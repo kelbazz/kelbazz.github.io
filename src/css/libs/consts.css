@@ -1,0 +1,16 @@
+
+:root {
+  /* Colors */
+  --kream: #f9e9ff;
+  --bluey: #0099FF;
+  --grenn: #71EC5F;
+  --yelli: #FFE856;
+  --redow: #E05F5F;
+  --puple: #9744E3;
+  --bluck: #0f1020;
+
+  /* Curves */
+  --wavey-out: cubic-bezier(0.00, 1.20, 0.80, 1.20);
+  --wavey-in: cubic-bezier(0.20, -0.20, 1, -0.20);
+  --wavey-in-out: cubic-bezier(0.20, -0.20, 0.80, 1.20);
+}

@@ -1,0 +1,19 @@
+@import url(./consts.css);
+@import url(./ui.css);
+@import url(./navbar.css);
+@import url(./footer.css);
+
+/* Basic style */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--kream);
+}

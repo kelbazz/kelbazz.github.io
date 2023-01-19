@@ -12,18 +12,33 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
+}
+
+#footer ::selection {
+  background-color: var(--bluey);
+  color: var(--bluck);
 }
 
 #footer>div {
   width: 100%;
 
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  
   justify-content: space-evenly;
   align-items: center;
 }
 
 #footer li, #footer a {
   color: var(--kream);
+  list-style: none;
+}
+
+#footer li::before {
+  content: "=> ";
+  font-family: "JetBrain Mono", monospace;
 }
 
 #footer button {

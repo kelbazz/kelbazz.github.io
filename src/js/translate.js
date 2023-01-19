@@ -2,8 +2,10 @@ export default function translate(filePath, lang) {
   fetch(filePath)
     .then((r) => r.json())
     .then((trads) => {
+      if (!trads[lang])
+        if (defaultLang) lang = defaultLang;
+        else throw "Cannot find data for this language";
       console.log(trads, lang);
-      if (!trads[lang]) throw "Cannot find data for this language";
 
       let page = new String(document.querySelector(":root").innerHTML);
       const matches = [...page.matchAll(/(?<!<\/>){{\s*(.+?)\s*}}/g)];
@@ -33,6 +35,7 @@ export default function translate(filePath, lang) {
 }
 
 const config = await (await fetch("/transl.json")).json();
+const defaultLang = config["settings.defaultLang"];
 const path = config["translations.folder"].endsWith("/")
   ? config["translations.folder"]
       .slice(0, config["translations.folder"].length - 1)

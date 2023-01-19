@@ -1,18 +1,24 @@
-@import url(./colors.css);
+@import url(./consts.css);
 
 /* Navbar */
 
 nav {
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 40px;
+  margin: 50px;
 
   position: fixed;
-  z-index: 999;
+  left: 0;
+  right: 0;
 
-  width: 100%;
+  z-index: 999;
+  user-select: none;
+
+  height: 50px;
 
   filter: drop-shadow(0 0 15px var(--bluey));
 }
@@ -24,8 +30,15 @@ nav>.links {
 }
 
 nav .logo {
-  height: 35px;
-  transition: all .2s ease;
+  transition: all .2s var(--wavey-out);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 40px;
+
+  gap: 5px;
 }
 
 nav .logo *,
@@ -34,7 +47,7 @@ nav>.links>svg * {
 }
 
 nav>.links>* {
-  transition: all .2s ease;
+  transition: all .2s var(--wavey-out);
 
   color: var(--bluey);
   text-decoration: none;
@@ -50,7 +63,7 @@ nav>.links>*:hover {
   rotate: -1 1 0 20deg;
 
   filter:
-    drop-shadow(1px 1px var(--dark-bluey)) drop-shadow(2px 2px var(--dark-bluey));
+    drop-shadow(1px 1px var(--bluey)) drop-shadow(2px 2px var(--bluey));
 }
 
 nav .logo:active,

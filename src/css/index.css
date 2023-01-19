@@ -1,4 +1,13 @@
-@import url("./main.css");
+@import url("/src/css/libs/main.css");
+
+:root {
+  --bluey-h: 204deg;
+  --bluey-s: 100%;
+  --bluey-l: 50%;
+
+  --bluey: hsl(var(--bluey-h), var(--bluey-s), var(--bluey-l));
+  --dark-bluey: hsl(var(--bluey-h), var(--bluey-s), calc(var(--bluey-l) - 5%));
+}
 
 /* Hero */
 #hero {
@@ -46,7 +55,7 @@
 #hero>.centered>.loko-title {
   width: clamp(100px, 50vw, 440px);
   fill: var(--bluey);
-  transition: all .2s ease;
+  transition: all .2s var(--wavey-out);
 }
 
 #hero>.centered>.loko-title:hover {
@@ -103,8 +112,8 @@
   bottom: calc(30px * var(--i) + 20px);
   left: 40px;
 
-  animation: float 2s ease-in-out calc(.3s * var(--i)) infinite alternate;
-  transition: all .2s ease;
+  animation: float 2s var(--wavey-in) calc(.3s * var(--i)) infinite alternate;
+  transition: all .2s var(--wavey-out);
 }
 
 .scroll-pointer:hover {

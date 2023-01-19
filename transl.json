@@ -1,3 +1,4 @@
 {
-  "translations.folder": "/assets/translations"
+  "translations.folder": "/assets/translations",
+  "settings.defaultLang": "en"
 }
