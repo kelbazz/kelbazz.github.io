@@ -10,7 +10,11 @@
     <div class="term"></div>
 
     <style>
-      *, ::before, ::after {
+      @import url(/src/css/libs/consts.css);
+
+      *,
+      ::before,
+      ::after {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
@@ -18,6 +22,7 @@
       body {
         width: 100vw;
         height: 100vh;
+        font-family: "JetBrains Mono", "Courier New", Courier, monospace;
       }
     </style>
     <script>
@@ -197,7 +202,7 @@
             description: "Clear the terminal",
             prefix: "$",
             exec: () => {
-              history.innerHTML = null;
+              history.innerText = null;
               return "Terminal cleared.";
             },
           },
@@ -216,7 +221,7 @@
             exec: (args) => {
               settings[args[0]] = args[1];
 
-              document.querySelector("#input-prefix").innerHTML =
+              document.querySelector("#input-prefix").innerText =
                 settings.inputPrefix();
 
               return args[0] + " is now set to " + args[1] + ".";
@@ -258,9 +263,6 @@
                   case "border":
                     window.open("https://onofficiel.github.io/border");
                     break;
-                  case "terminal":
-                    window.open("https://onofficiel.github.io/terminal");
-                    break;
                   case "openos":
                     window.open("https://onofficiel.github.io/open-os");
                     break;
@@ -270,7 +272,13 @@
               } else {
                 showCmdInTerm(
                   "echo",
-                  "My projects :<br/><b>border</b>: a web iframe browser<br/><b>w96</b>: I've made some app for Windows96 like VSCode<br/><b>terminal</b>: A terminal in JavaScript<br/><b>openos</b>: An Web OS WIP<br/><br/>"
+                  [
+                    "My projects :",
+                    "<b>border</b>: a web iframe browser",
+                    "<b>w96</b>: I've made some app for Windows96 like VSCode",
+                    "<b>openos</b>: An Web OS WIP",
+                    "<br/>",
+                  ].join("\n")
                 );
                 return "You can see the site of any project by typing 'projects ' and a project name in bold.";
               }
@@ -299,12 +307,7 @@
         prefix: "$ ",
         cmdPrefix: false,
         name: "user",
-        hostname: (navigator.userAgentData
-          ? navigator.userAgentData.brands[0].brand
-          : navigator.appCodeName
-        )
-          .toLowerCase()
-          .replace(" ", "_"),
+        hostname: navigator.platform.toLowerCase().replace(" ", "_"),
         version: 404,
         inputPrefix: function () {
           return this.name + "@" + this.hostname + ": " + this.prefix;
@@ -409,24 +412,24 @@
       function handleCommand(command) {
         const line = document.createElement("div");
 
-        line.textContent = settings.inputPrefix() + command;
+        line.innerText = settings.inputPrefix() + command;
 
         history.appendChild(line);
 
         const output = document.createElement("div");
 
-        let args = input.textContent.split(/ +/);
+        let args = input.innerText.split(/ +/);
         let cmd = args[0];
         args.shift();
 
-        output.textContent = "> " + term.execCmd(cmd, ...args);
+        output.innerText = term.execCmd(cmd, ...args).toString();
 
         history.appendChild(output);
       }
 
       const showCmdInTerm = (cmd, ...args) => {
-        let text = document.createElement("div");
-        text.innerHTML = term.execCmd(cmd, ...args);
+        let text = document.createElement("pre");
+        text.innerText = term.execCmd(cmd, ...args);
 
         history.appendChild(text);
       };
@@ -478,7 +481,14 @@
       input.focus();
       showCmdInTerm(
         "echo",
-        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o88&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ooooooo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o88<br/>&nbsp;&nbsp;&nbsp;&nbsp;o8888&nbsp;&nbsp;&nbsp;o888&nbsp;&nbsp;o888o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o8888&nbsp;&nbsp;&nbsp;Page&nbsp;not&nbsp;found&nbsp;!<br/>&nbsp;&nbsp;o88&nbsp;888&nbsp;&nbsp;&nbsp;888&nbsp;&nbsp;8&nbsp;&nbsp;888&nbsp;&nbsp;&nbsp;o88&nbsp;888<br/>o888oo888oo&nbsp;888o8&nbsp;&nbsp;o888&nbsp;o888oo888oo&nbsp;Type&nbsp;\"cd&nbsp;/\"&nbsp;to&nbsp;return&nbsp;to&nbsp;the&nbsp;homepage.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o888o&nbsp;&nbsp;&nbsp;&nbsp;88ooo88&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o888o"
+        [
+          "      o88     ooooooo         o88",
+          "    o8888   o888  o888o     o8888   Page not found !",
+          "  o88 888   888  8  888   o88 888",
+          'o888oo888oo 888o8  o888 o888oo888oo Type "cd /" to return to the homepage.',
+          "     o888o    88ooo88        o888o",
+          "\n",
+        ].join("\n")
       );
     </script>
   </body>

@@ -53,7 +53,7 @@ import translate from "../js/translate.js";
   );
 }
 
-const data = await fetch("../../assets/data/wise.json").then((r) => r.json());
+const data = await fetch("/assets/data/wise.json").then((r) => r.json());
 
 let template =
   data.templates[Math.floor(Math.random() * data.templates.length)];
