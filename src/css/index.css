@@ -56,13 +56,19 @@
   width: clamp(100px, 50vw, 440px);
   fill: var(--bluey);
   transition: all .2s var(--wavey-out);
+  overflow: visible;
 }
 
 #hero>.centered>.loko-title:hover {
   scale: 1.1;
   transform: rotateX(-20deg) rotateY(20deg);
+}
 
+#hero>.centered>.loko-title>path {
+  transition: all var(--wavey-out) .2s;
+}
 
+#hero>.centered>.loko-title:hover>path {
   filter:
     drop-shadow(1px 1px var(--dark-bluey))
     /* ----------1px----------- */
@@ -73,9 +79,30 @@
     drop-shadow(4px 4px var(--dark-bluey));
 }
 
-#hero>.centered>.loko-title:active {
-  scale: .9;
+#hero>.centered>.loko-title:hover>path:active {
+  filter:
+    drop-shadow(1px 1px var(--dark-bluey))
+    /* ----------1px----------- */
+    drop-shadow(2px 2px var(--dark-bluey))
+    /* ----------2px----------- */
+    drop-shadow(3px 3px var(--dark-bluey))
+    /* ----------3px----------- */
+    drop-shadow(4px 4px var(--dark-bluey))
+    /* ----------4px----------- */
+    drop-shadow(5px 5px var(--dark-bluey))
+    /* ----------5px----------- */
+    drop-shadow(6px 6px var(--dark-bluey))
+    /* ----------6px----------- */
+    drop-shadow(7px 7px var(--dark-bluey))
+    /* ----------7px----------- */
+    drop-shadow(8px 8px var(--dark-bluey));
+    /* ----------8px----------- */
+  translate: -25px -25px;
 }
+
+/* #hero>.centered>.loko-title:active {
+  scale: .9;
+} */
 
 
 .parody-line {
